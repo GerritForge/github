@@ -1,5 +1,12 @@
 {
   "checks": {
+    "gerritforge:github-3852e64366bb37d13b8baf8af9b15cfd38eb9227": {
+      "state": "FAILED",
+      "url": "https://gerrit-ci.gerritforge.com/job/plugin-github-verifier/job/81%252F446781%252F1/1/console",
+      "finished": "2024-12-29T04:07:43Z",
+      "created": "2024-12-29T04:07:44Z",
+      "updated": "2024-12-29T04:07:44Z"
+    },
     "gerritforge:github-format-3852e64366bb37d13b8baf8af9b15cfd38eb9227": {
       "state": "RUNNING",
       "url": "https://gerrit-ci.gerritforge.com/job/plugin-github-verifier/job/81%252F446781%252F1/1/console",
