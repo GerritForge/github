@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "gerritforge:github-format-3852e64366bb37d13b8baf8af9b15cfd38eb9227": {
+      "state": "RUNNING",
+      "url": "https://gerrit-ci.gerritforge.com/job/plugin-github-verifier/job/01%252F492601%252F2/1/console",
+      "started": "2025-07-20T14:06:56Z",
+      "created": "2025-07-20T14:06:57Z",
+      "updated": "2025-07-20T14:06:57Z"
+    }
+  }
+}
