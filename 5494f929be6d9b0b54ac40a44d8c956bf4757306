@@ -16,6 +16,23 @@
       "message": "@luca.milanesio@gmail.com this can be merged, failure is unrelated. This fixes building the plugin at least with the eslint error shown. The java files seem to need adapting to gerrit @ master.",
       "revId": "5494f929be6d9b0b54ac40a44d8c956bf4757306",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a716ee3_8cbfe07e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2025-08-10T00:16:25Z",
+      "side": 1,
+      "message": "Bump :)",
+      "revId": "5494f929be6d9b0b54ac40a44d8c956bf4757306",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
