@@ -28,6 +28,7 @@ public class GitImporter extends BatchImporter {
   private static final Logger log = LoggerFactory.getLogger(GitImporter.class);
   private final ProtectedBranchesCheckStep.Factory protectedBranchesCheckFactory;
   private final MagicRefCheckStep.Factory magicRefCheckFactory;
+  private final QuotaCheckStep.Factory quotaCheckFactory;
   private final GitCloneStep.Factory cloneFactory;
   private final CreateProjectStep.Factory projectFactory;
   private final ReplicateProjectStep.Factory replicateFactory;
@@ -39,6 +40,7 @@ public class GitImporter extends BatchImporter {
       CreateProjectStep.Factory projectFactory,
       ReplicateProjectStep.Factory replicateFactory,
       MagicRefCheckStep.Factory magicRefCheckFactory,
+      QuotaCheckStep.Factory quotaCheckFactory,
       JobExecutor executor,
       IdentifiedUser user) {
     super(executor, user);
@@ -47,6 +49,7 @@ public class GitImporter extends BatchImporter {
     this.projectFactory = projectFactory;
     this.replicateFactory = replicateFactory;
     this.magicRefCheckFactory = magicRefCheckFactory;
+    this.quotaCheckFactory = quotaCheckFactory;
   }
 
   public void clone(int idx, String organisation, String repository, String description) {
@@ -57,12 +60,14 @@ public class GitImporter extends BatchImporter {
       MagicRefCheckStep magicRefCheckStep = magicRefCheckFactory.create(organisation, repository);
       CreateProjectStep projectStep =
           projectFactory.create(organisation, repository, description, user.getUserName().get());
+      QuotaCheckStep quotaCheckStep = quotaCheckFactory.create(organisation, repository);
       ReplicateProjectStep replicateStep = replicateFactory.create(organisation, repository);
       GitImportJob gitCloneJob =
           new GitImportJob(
               idx,
               organisation,
               repository,
+              quotaCheckStep,
               protectedBranchesCheckStep,
               magicRefCheckStep,
               cloneStep,

@@ -196,4 +196,23 @@ Found 2 ref(s): Please remove or rename the following refs and try again:
   refs/for/foo, refs/meta/bar
 ```
 
-More information on Gerrit magic refs can be found [here](https://gerrit-review.googlesource.com/Documentation/intro-user.html#upload-change)
+More information on Gerrit magic refs can be
+found [here](https://gerrit-review.googlesource.com/Documentation/intro-user.html#upload-change)
+
+#### Enforcing Size Quota
+
+When a repository is imported from GitHub, the plugin verifies that its size does not exceed any
+configured quota constraints.
+
+A common case is a quota defined by the
+[quota plugin](https://gerrit.googlesource.com/plugins/quota/+/refs/heads/master/src/main/resources/Documentation/config.md#quota),
+which can restrict how much storage space repositories may consume or how many repositories can be
+created within a given namespace.
+
+If an imported repository exceeds the allowed quota, the operation fails with an error message.
+For example:
+
+```text
+Unable to create repository foo/bar: project cannot be created because a quota for the namespace
+'foo/*' allows at most 3 projects and 3 projects already exist.
+```
