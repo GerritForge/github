@@ -131,6 +131,52 @@
       },
       "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf55b26d_456f1c05",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:46:37Z",
+      "side": 1,
+      "message": "nit: `sizeKb`",
+      "range": {
+        "startLine": 55,
+        "startChar": 10,
+        "endLine": 55,
+        "endChar": 14
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c57cd370_c44692c6",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:46:37Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be `QuotaEnforcedException`?",
+      "range": {
+        "startLine": 67,
+        "startChar": 16,
+        "endLine": 67,
+        "endChar": 28
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
