@@ -49,6 +49,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0d4bb1ff_e4f59435",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/GitImporter.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:41:35Z",
+      "side": 1,
+      "message": "Why here and not at the very beginning ?",
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "169bc9cd_3d8fc4e0",
         "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
         "patchSetId": 4
