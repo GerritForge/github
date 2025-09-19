@@ -21,7 +21,6 @@ import com.google.gerrit.extensions.api.changes.NotifyHandling;
 import com.google.gerrit.extensions.api.projects.ProjectInput;
 import com.google.gerrit.extensions.events.ProjectDeletedListener;
 import com.google.gerrit.extensions.registration.DynamicSet;
-import com.google.gerrit.extensions.restapi.ResourceConflictException;
 import com.google.gerrit.extensions.restapi.RestApiException;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.gerrit.server.account.AccountState;
@@ -114,10 +113,9 @@ public class GitCloneStep extends ImportStep {
       pi.parent = config.getBaseProject(ghRepository.isPrivate());
       pi.branches = Stream.ofNullable(ghRepository.getDefaultBranch()).collect(toList());
       gerritApi.projects().create(pi).get();
-    } catch (ResourceConflictException e) {
-      throw new GitDestinationAlreadyExistsException(projectName);
     } catch (RestApiException e) {
-      throw new GitException("Unable to create repository " + projectName, e);
+      throw new GitException(
+          "Unable to create repository " + projectName + ":" + e.getMessage(), e);
     }
   }
 
