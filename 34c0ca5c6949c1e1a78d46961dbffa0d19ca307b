@@ -108,6 +108,29 @@
       },
       "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "edefe2d9_ebf30540",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:44:21Z",
+      "side": 1,
+      "message": "`long` ?",
+      "range": {
+        "startLine": 55,
+        "startChar": 6,
+        "endLine": 55,
+        "endChar": 9
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
