@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5a14f5a_f114f9e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:37:15Z",
+      "side": 1,
+      "message": "It this part of this change?",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 29
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "91f8967c_110a4fa0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:37:15Z",
+      "side": 1,
+      "message": "I think we should add this to the README",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 40
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "169bc9cd_3d8fc4e0",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:37:15Z",
+      "side": 1,
+      "message": "`repository`",
+      "range": {
+        "startLine": 34,
+        "startChar": 66,
+        "endLine": 34,
+        "endChar": 70
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92cc8e0f_f91aef6b",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1054778
+      },
+      "writtenOn": "2025-09-19T15:37:15Z",
+      "side": 1,
+      "message": "nit: Can we add  acommment saying the API returns bytes, hence you are multiplying?",
+      "range": {
+        "startLine": 55,
+        "startChar": 33,
+        "endLine": 55,
+        "endChar": 40
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
