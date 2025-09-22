@@ -1,5 +1,12 @@
 {
   "checks": {
+    "gerritforge:github-3852e64366bb37d13b8baf8af9b15cfd38eb9227": {
+      "state": "RUNNING",
+      "url": "https://gerrit-ci.gerritforge.com/job/plugin-github-verifier/job/83%252F510983%252F4/1/console",
+      "started": "2025-09-22T11:25:44Z",
+      "created": "2025-09-22T11:25:45Z",
+      "updated": "2025-09-22T11:25:45Z"
+    },
     "gerritforge:github-format-3852e64366bb37d13b8baf8af9b15cfd38eb9227": {
       "state": "SUCCESSFUL",
       "url": "https://gerrit-ci.gerritforge.com/job/plugin-github-verifier/job/83%252F510983%252F4/1/console",
