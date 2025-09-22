@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "863dec75_0e1ac63e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:24:00Z",
+      "side": 1,
+      "message": "Yes exactly:\n\n```\nfor example, when import fails due to exceeding the `maxProjects` quota\nin a namespace.\n```",
+      "parentUuid": "2b993a74_d1a6762b",
+      "range": {
+        "startLine": 12,
+        "startChar": 52,
+        "endLine": 12,
+        "endChar": 72
+      },
+      "revId": "34861a058c4b68c81d3fdff0d57cea33a8afd1fe",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d2984d60_e56631f2",
