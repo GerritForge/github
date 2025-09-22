@@ -48,6 +48,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "725c9fab_b0aa65c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "Yep I have introduced this exception here, but then forgot to use it 😊\nDone now, thanks @ponch78@gmail.com.",
+      "parentUuid": "93575803_b48f1948",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 29
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "91f8967c_110a4fa0",
@@ -61,6 +85,30 @@
       "writtenOn": "2025-09-19T15:37:15Z",
       "side": 1,
       "message": "I think we should add this to the README",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 40
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6498815a_541aafc9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "There\u0027s no README in this plugin; there\u0027s only `about.md` and `config.md`.\nNone of them talks about any of the steps that currently exist.\n\nIf we were to document this particular step, we should probably do the same with all the pre-existing steps, but this would be out-of-scope imho.\n\nIf you feel strongly about documenting this behaviour I suggest that it is done as a follow up step and not as part of this issue.\n\nWDYT?",
+      "parentUuid": "91f8967c_110a4fa0",
       "range": {
         "startLine": 13,
         "startChar": 0,
@@ -90,6 +138,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a9fd723d_314fb37a",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/GitImporter.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "All these checks must be compliant. I am not sure how to prioritise them.\nThe cheapest first? Does it matter?\nLet\u0027s catch up about this.",
+      "parentUuid": "0d4bb1ff_e4f59435",
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "169bc9cd_3d8fc4e0",
         "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
         "patchSetId": 4
@@ -101,6 +167,30 @@
       "writtenOn": "2025-09-19T15:37:15Z",
       "side": 1,
       "message": "`repository`",
+      "range": {
+        "startLine": 34,
+        "startChar": 66,
+        "endLine": 34,
+        "endChar": 70
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8da09807_2ebf97d6",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "169bc9cd_3d8fc4e0",
       "range": {
         "startLine": 34,
         "startChar": 66,
@@ -180,6 +270,78 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e53d56f7_824fe132",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "edefe2d9_ebf30540",
+      "range": {
+        "startLine": 55,
+        "startChar": 6,
+        "endLine": 55,
+        "endChar": 9
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d375130_86994cb7",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "The size will be in `bytes` (we multiply by 1024), not in `Kb`.\nI have adjusted the name accordingly.",
+      "parentUuid": "cf55b26d_456f1c05",
+      "range": {
+        "startLine": 55,
+        "startChar": 10,
+        "endLine": 55,
+        "endChar": 14
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fabf1cbd_ee37a3b7",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "The Api returns `kilobytes` we are multiplying to get `bytes` instead.\nI have added a constant so that the intent is obvious now.",
+      "parentUuid": "92cc8e0f_f91aef6b",
+      "range": {
+        "startLine": 55,
+        "startChar": 33,
+        "endLine": 55,
+        "endChar": 40
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "20cd958c_2c7cadcf",
@@ -203,6 +365,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00753176_649bea93",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "Yes, if the repo-size is `0` we accept it because we know it is not going to consume any quota.",
+      "parentUuid": "20cd958c_2c7cadcf",
+      "range": {
+        "startLine": 59,
+        "startChar": 6,
+        "endLine": 59,
+        "endChar": 19
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c57cd370_c44692c6",
@@ -216,6 +402,30 @@
       "writtenOn": "2025-09-19T15:46:37Z",
       "side": 1,
       "message": "Shouldn\u0027t this be `QuotaEnforcedException`?",
+      "range": {
+        "startLine": 67,
+        "startChar": 16,
+        "endLine": 67,
+        "endChar": 28
+      },
+      "revId": "34c0ca5c6949c1e1a78d46961dbffa0d19ca307b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bae2e3e_b97be95a",
+        "filename": "github-plugin/src/main/java/com/googlesource/gerrit/plugins/github/git/QuotaCheckStep.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1072905
+      },
+      "writtenOn": "2025-09-22T11:22:14Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "c57cd370_c44692c6",
       "range": {
         "startLine": 67,
         "startChar": 16,
