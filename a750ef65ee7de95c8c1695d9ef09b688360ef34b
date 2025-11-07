@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "928fd08c_55f51e3b",
+        "filename": "github-oauth/src/main/java/com/gerritforge/gerrit/plugins/github/oauth/OAuthProtocol.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1020677
+      },
+      "writtenOn": "2025-11-07T17:59:37Z",
+      "side": 1,
+      "message": "This file has no licence, should we add it?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 52
+      },
+      "revId": "a750ef65ee7de95c8c1695d9ef09b688360ef34b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
