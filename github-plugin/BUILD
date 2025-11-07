@@ -6,8 +6,8 @@ load("//tools/bzl:junit.bzl", "junit_tests")
 load("//tools/bzl:plugin.bzl", "PLUGIN_DEPS", "PLUGIN_DEPS_NEVERLINK", "PLUGIN_TEST_DEPS", "gerrit_plugin")
 
 SOURCES_WITH_LOMBOK_USAGE = [
-    "src/main/java/com/googlesource/gerrit/plugins/github/git/GitHubRepository.java",
-    "src/main/java/com/googlesource/gerrit/plugins/github/GitHubURL.java",
+    "src/main/java/com/gerritforge/gerrit/plugins/github/git/GitHubRepository.java",
+    "src/main/java/com/gerritforge/gerrit/plugins/github/GitHubURL.java",
 ]
 
 gerrit_plugin(
@@ -19,9 +19,9 @@ gerrit_plugin(
     dir_name = "github",
     manifest_entries = [
         "Gerrit-PluginName: github-plugin",
-        "Gerrit-Module: com.googlesource.gerrit.plugins.github.GuiceModule",
-        "Gerrit-HttpModule: com.googlesource.gerrit.plugins.github.GuiceHttpModule",
-        "Gerrit-InitStep: com.googlesource.gerrit.plugins.github.InitGitHub",
+        "Gerrit-Module: com.gerritforge.gerrit.plugins.github.GuiceModule",
+        "Gerrit-HttpModule: com.gerritforge.gerrit.plugins.github.GuiceHttpModule",
+        "Gerrit-InitStep: com.gerritforge.gerrit.plugins.github.InitGitHub",
         "Implementation-Title: GitHub plugin",
         "Implementation-Vendor: GerritForge",
         "Implementation-URL: http://www.gerritforge.com",

@@ -1,0 +1,130 @@
+// Copyright (C) 2025 GerritForge, Inc.
+//
+// Licensed under the BSL 1.1 (the "License");
+// you may not use this file except in compliance with the License.
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package com.gerritforge.gerrit.plugins.github.group;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.gerritforge.gerrit.plugins.github.group.GitHubGroup.NAME_PREFIX;
+import static com.gerritforge.gerrit.plugins.github.group.GitHubGroup.UUID_PREFIX;
+
+import com.google.common.base.Strings;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.ImmutableSet.Builder;
+import com.google.gerrit.entities.AccountGroup;
+import com.google.gerrit.entities.AccountGroup.UUID;
+import com.google.gerrit.entities.GroupDescription.Basic;
+import com.google.gerrit.entities.GroupReference;
+import com.google.gerrit.server.CurrentUser;
+import com.google.gerrit.server.account.GroupBackend;
+import com.google.gerrit.server.account.GroupMembership;
+import com.google.gerrit.server.project.ProjectState;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class GitHubGroupBackend implements GroupBackend {
+  private static final Logger log = LoggerFactory.getLogger(GitHubGroupBackend.class);
+  private final GitHubGroupMembership.Factory ghMembershipProvider;
+  private final GitHubGroupsCache ghOrganisationCache;
+  private final Provider<CurrentUser> currentUserProvider;
+
+  @Inject
+  GitHubGroupBackend(
+      GitHubGroupMembership.Factory ghMembershipProvider,
+      GitHubGroupsCache ghOrganisationCache,
+      Provider<CurrentUser> currentUserProvider) {
+    this.ghMembershipProvider = ghMembershipProvider;
+    this.ghOrganisationCache = ghOrganisationCache;
+    this.currentUserProvider = currentUserProvider;
+  }
+
+  @Override
+  public boolean isVisibleToAll(AccountGroup.UUID uuid) {
+    return true;
+  }
+
+  @Override
+  public boolean handles(UUID uuid) {
+    return uuid.get().startsWith(UUID_PREFIX);
+  }
+
+  @Override
+  public Basic get(UUID uuid) {
+    checkArgument(handles(uuid), "{} is not a valid GitHub Group UUID", uuid.get());
+    return GitHubOrganisationGroup.fromUUID(uuid);
+  }
+
+  @Override
+  public Collection<GroupReference> suggest(String name, ProjectState project) {
+    if (!name.startsWith(NAME_PREFIX)) {
+      return Collections.emptyList();
+    }
+    String orgNamePrefix = name.substring(NAME_PREFIX.length());
+    return listByPrefix(orgNamePrefix);
+  }
+
+  public Set<GroupReference> listByPrefix(String orgNamePrefix) {
+    try {
+      log.debug("Listing user's organisations starting with '{}'", orgNamePrefix);
+
+      String[] namePrefixParts = orgNamePrefix.toLowerCase().split("/");
+      String orgNamePrefixLowercase = namePrefixParts.length > 0 ? namePrefixParts[0] : "";
+      String teamNameLowercase = namePrefixParts.length > 1 ? namePrefixParts[1] : "";
+
+      Set<String> ghOrgs = ghOrganisationCache.getOrganizationsForCurrentUser();
+      log.debug("Full list of user's organisations: {}", ghOrgs);
+
+      Builder<GroupReference> orgGroups = new ImmutableSet.Builder<>();
+      for (String organizationName : ghOrgs) {
+        if (organizationName.toLowerCase().startsWith(orgNamePrefixLowercase)) {
+          GroupReference teamGroupRef = GitHubOrganisationGroup.groupReference(organizationName);
+
+          if ((orgNamePrefixLowercase.length() > 0 && orgNamePrefix.endsWith("/"))
+              || teamNameLowercase.length() > 0) {
+            for (String teamName : ghOrganisationCache.getTeamsForCurrentUser(organizationName)) {
+              if (teamName.toLowerCase().startsWith(teamNameLowercase)) {
+                orgGroups.add(GitHubTeamGroup.groupReference(teamGroupRef, teamName));
+              }
+            }
+          } else {
+            orgGroups.add(teamGroupRef);
+          }
+        }
+      }
+      return orgGroups.build();
+    } catch (ExecutionException e) {
+      log.warn("Cannot get GitHub organisations matching '" + orgNamePrefix + "'", e);
+    }
+
+    return Collections.emptySet();
+  }
+
+  @Override
+  public GroupMembership membershipsOf(CurrentUser user) {
+    CurrentUser currentUser = currentUserProvider.get();
+    if (!currentUser.isIdentifiedUser()
+        || !currentUser.asIdentifiedUser().getAccountId().equals(user.getAccountId())) {
+      // Do not allow to perform group discovery of other users
+      return GroupMembership.EMPTY;
+    }
+
+    String username = user.getUserName().orElse(null);
+    if (Strings.isNullOrEmpty(username)) {
+      return GroupMembership.EMPTY;
+    }
+    return ghMembershipProvider.get(username);
+  }
+}
