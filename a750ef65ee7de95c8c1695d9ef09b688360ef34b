@@ -22,6 +22,30 @@
       },
       "revId": "a750ef65ee7de95c8c1695d9ef09b688360ef34b",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cda4c23c_d0595198",
+        "filename": "github-oauth/src/main/java/com/gerritforge/gerrit/plugins/github/oauth/OAuthProtocol.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2025-11-07T18:31:18Z",
+      "side": 1,
+      "message": "I think so",
+      "parentUuid": "928fd08c_55f51e3b",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 52
+      },
+      "revId": "a750ef65ee7de95c8c1695d9ef09b688360ef34b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
