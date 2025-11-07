@@ -1,0 +1,79 @@
+// Copyright (C) 2025 GerritForge, Inc.
+//
+// Licensed under the BSL 1.1 (the "License");
+// you may not use this file except in compliance with the License.
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+package com.gerritforge.gerrit.plugins.github.git;
+
+import com.google.gerrit.server.IdentifiedUser;
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+import com.gerritforge.gerrit.plugins.github.oauth.HttpSessionProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class GitImporter extends BatchImporter {
+
+  @Singleton
+  public static class Provider extends HttpSessionProvider<GitImporter> {}
+
+  private static final Logger log = LoggerFactory.getLogger(GitImporter.class);
+  private final ProtectedBranchesCheckStep.Factory protectedBranchesCheckFactory;
+  private final MagicRefCheckStep.Factory magicRefCheckFactory;
+  private final QuotaCheckStep.Factory quotaCheckFactory;
+  private final GitCloneStep.Factory cloneFactory;
+  private final CreateProjectStep.Factory projectFactory;
+  private final ReplicateProjectStep.Factory replicateFactory;
+
+  @Inject
+  public GitImporter(
+      ProtectedBranchesCheckStep.Factory protectedBranchesCheckFactory,
+      GitCloneStep.Factory cloneFactory,
+      CreateProjectStep.Factory projectFactory,
+      ReplicateProjectStep.Factory replicateFactory,
+      MagicRefCheckStep.Factory magicRefCheckFactory,
+      QuotaCheckStep.Factory quotaCheckFactory,
+      JobExecutor executor,
+      IdentifiedUser user) {
+    super(executor, user);
+    this.protectedBranchesCheckFactory = protectedBranchesCheckFactory;
+    this.cloneFactory = cloneFactory;
+    this.projectFactory = projectFactory;
+    this.replicateFactory = replicateFactory;
+    this.magicRefCheckFactory = magicRefCheckFactory;
+    this.quotaCheckFactory = quotaCheckFactory;
+  }
+
+  public void clone(int idx, String organisation, String repository, String description) {
+    try {
+      ProtectedBranchesCheckStep protectedBranchesCheckStep =
+          protectedBranchesCheckFactory.create(organisation, repository);
+      GitCloneStep cloneStep = cloneFactory.create(organisation, repository);
+      MagicRefCheckStep magicRefCheckStep = magicRefCheckFactory.create(organisation, repository);
+      CreateProjectStep projectStep =
+          projectFactory.create(organisation, repository, description, user.getUserName().get());
+      QuotaCheckStep quotaCheckStep = quotaCheckFactory.create(organisation, repository);
+      ReplicateProjectStep replicateStep = replicateFactory.create(organisation, repository);
+      GitImportJob gitCloneJob =
+          new GitImportJob(
+              idx,
+              organisation,
+              repository,
+              quotaCheckStep,
+              protectedBranchesCheckStep,
+              magicRefCheckStep,
+              cloneStep,
+              projectStep,
+              replicateStep);
+      log.debug("New Git clone job created: " + gitCloneJob);
+      schedule(idx, gitCloneJob);
+    } catch (Throwable e) {
+      schedule(idx, new ErrorJob(idx, organisation, repository, e));
+    }
+  }
+}
