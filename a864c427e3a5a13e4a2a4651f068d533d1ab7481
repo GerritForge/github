@@ -24,6 +24,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "37c33f52_213256b8",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-09T12:08:37Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "7addb0e6_6fd71ddf",
+      "range": {
+        "startLine": 85,
+        "startChar": 12,
+        "endLine": 85,
+        "endChar": 58
+      },
+      "revId": "a864c427e3a5a13e4a2a4651f068d533d1ab7481",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5e1af378_e9b638ed",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-11-09T12:07:25Z",
       "side": 1,
       "message": "This should point to the GitHub URL.\n\n\n\n```suggestion\nJust clone the Git repository (see https://github.com/GerritForge/github)\n```",
+      "range": {
+        "startLine": 105,
+        "startChar": 35,
+        "endLine": 105,
+        "endChar": 105
+      },
+      "revId": "a864c427e3a5a13e4a2a4651f068d533d1ab7481",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "095dfc1c_a32a3b76",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-09T12:08:37Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "5e1af378_e9b638ed",
       "range": {
         "startLine": 105,
         "startChar": 35,
