@@ -82,7 +82,7 @@ The GitHub plugin can be built for Java 17 by using the `javaVersion=1.17` Maven
 parameter.
 
 Example:
-  git clone https://gerrit.googlesource.com/plugins/github
+  git clone https://github.com/GerritForge/github
   cd github
   mvn -DjavaVersion=17 install
 
@@ -102,7 +102,7 @@ Example:
 
 ### Building GitHub integration for Gerrit
 
-Just clone the Git repository (see https://gerrit-review.googlesource.com/#/admin/projects/plugins/github)
+Just clone the Git repository (see https://github.com/GerritForge/github)
 and do a `mvn install` from the root directory.
 This will create two JARs under github-oauth/target and github-plugin/target: the oauth is a JAR library
 to be copied to $GERRIT_SITE/lib whilst the plugin JAR has to be installed as usual under $GERRIT_SITE/plugins.
