@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7addb0e6_6fd71ddf",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-09T12:07:25Z",
+      "side": 1,
+      "message": "This should point to the GitHub URL\n\n\n\n```suggestion\n  git clone https://github.com/GerritForge/github\n```",
+      "range": {
+        "startLine": 85,
+        "startChar": 12,
+        "endLine": 85,
+        "endChar": 58
+      },
+      "revId": "a864c427e3a5a13e4a2a4651f068d533d1ab7481",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e1af378_e9b638ed",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-09T12:07:25Z",
+      "side": 1,
+      "message": "This should point to the GitHub URL.\n\n\n\n```suggestion\nJust clone the Git repository (see https://github.com/GerritForge/github)\n```",
+      "range": {
+        "startLine": 105,
+        "startChar": 35,
+        "endLine": 105,
+        "endChar": 105
+      },
+      "revId": "a864c427e3a5a13e4a2a4651f068d533d1ab7481",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cb245dc_5a802fc7",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-11-09T12:07:25Z",
+      "side": 1,
+      "message": "Unrelated: this is stale as we use Bazel nowadays for building the plugin.",
+      "range": {
+        "startLine": 106,
+        "startChar": 9,
+        "endLine": 106,
+        "endChar": 46
+      },
+      "revId": "a864c427e3a5a13e4a2a4651f068d533d1ab7481",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
