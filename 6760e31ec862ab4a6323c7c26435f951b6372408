@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7af3df90_5fdc1054",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2025-11-12T12:49:47Z",
+      "side": 1,
+      "message": "Use \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d inmstead of ###",
+      "revId": "6760e31ec862ab4a6323c7c26435f951b6372408",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
