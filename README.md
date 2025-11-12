@@ -16,7 +16,7 @@ with temporary commercial restrictions.
   commercial license, please contact [GerritForge Sales](https://gerritforge.com/contact).
 
 
-Why using GitHub and Gerrit together ?
+Why use GitHub and Gerrit together ?
 --------------------------------------
 
 Many people see Gerrit and GitHub as opposites: the pull-request
