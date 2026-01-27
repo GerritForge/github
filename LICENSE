@@ -30,7 +30,7 @@ materially equivalent to, Gerrit Enterprise or any paid, commercial, or enterpri
 Licensor that includes Gerrit Enterprise; or (2) constitute providing the Licensed Work (or
 substantial portions thereof) to third parties as a service or product that competes with any
 commercial offering from the Licensor in code review, code collaboration, or CI/CD orchestration
-based on Gerrit.
+based on Gerrit; or (3) have a gross annual revenue exceeding 5 million US dollars.
 
 Partners, integrations, extensions, and plugins that do not provide a competing hosted or embedded
 substitute are permitted, including building and distributing integrations, connectors, or plugins,
