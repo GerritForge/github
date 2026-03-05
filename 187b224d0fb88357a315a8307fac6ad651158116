@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8a9f0a6_8fc61815",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2026-03-05T14:16:46Z",
+      "side": 1,
+      "message": "nit: you could use `git config --show-origin --get-all user.email` instead",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 62
+      },
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60fa440f_6a102dd0",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2026-03-05T14:16:46Z",
+      "side": 1,
+      "message": "This prerequisite is only under the PR workflow. However, I believe it should either go on both the Change and PR workflow or be removed. I would just remove it.\n\nAlso, we explicitly refer to `go`. I think it might be confusing since the plugin tests are not necessarely ran with `go`. In our case, none of them. I would generally defer it to the plugin documentation.",
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c623ac7e_4e5846c8",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2026-03-05T14:16:46Z",
+      "side": 1,
+      "message": "We are already pointing to documentation explaining how to write a goood commit message. I think the example is redundant.",
+      "range": {
+        "startLine": 291,
+        "startChar": 0,
+        "endLine": 309,
+        "endChar": 3
+      },
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6cadbf7a_c04019ec",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2026-03-05T14:16:46Z",
+      "side": 1,
+      "message": "Shall we also mention there are no SLAs?",
+      "range": {
+        "startLine": 318,
+        "startChar": 68,
+        "endLine": 318,
+        "endChar": 72
+      },
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
