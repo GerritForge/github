@@ -65,6 +65,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3552f2b9_09a8e2eb",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-05T15:33:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60fa440f_6a102dd0",
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c623ac7e_4e5846c8",
@@ -88,6 +106,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db16ec7e_cc58b918",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-05T15:33:21Z",
+      "side": 1,
+      "message": "I believe an example speaks more than 1000 words, I wouldn\u0027t bother about being redundant.",
+      "parentUuid": "c623ac7e_4e5846c8",
+      "range": {
+        "startLine": 291,
+        "startChar": 0,
+        "endLine": 309,
+        "endChar": 3
+      },
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6cadbf7a_c04019ec",
@@ -101,6 +143,30 @@
       "writtenOn": "2026-03-05T14:16:46Z",
       "side": 1,
       "message": "Shall we also mention there are no SLAs?",
+      "range": {
+        "startLine": 318,
+        "startChar": 68,
+        "endLine": 318,
+        "endChar": 72
+      },
+      "revId": "187b224d0fb88357a315a8307fac6ad651158116",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "06d20396_1ab26ded",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-05T15:33:21Z",
+      "side": 1,
+      "message": "This isn\u0027t a contract; therefore, we can just avoid mentioning it altogether.",
+      "parentUuid": "6cadbf7a_c04019ec",
       "range": {
         "startLine": 318,
         "startChar": 68,
