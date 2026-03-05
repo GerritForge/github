@@ -15,6 +15,11 @@ with temporary commercial restrictions.
 * If your intended use case falls outside the **Additional Use Grant** and you require a
   commercial license, please contact [GerritForge Sales](https://gerritforge.com/contact).
 
+Contributing
+------------
+
+Please refer to the [contributor guide](CONTRIBUTING.md) for all the details.
+Contributions require that you sign the [Contributor Copyright Assignment Agreement](https://www.gerritforge.com/20260305.GerritForge.BSL.Contributors.Agreement.pdf).
 
 Why use GitHub and Gerrit together ?
 --------------------------------------
