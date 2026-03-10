@@ -16,7 +16,7 @@ java_library(
         "//lib:servlet-api",
         "@bridge-method-annotation//jar",
         "@bridge-method-injector//jar",
-        "@commons-io//jar",
+        "@external_deps//:commons_io_commons_io",
         "@github-api//jar",
         "@jackson-annotations//jar",
         "@jackson-core//jar",
