@@ -24,6 +24,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c429f912_e85cb66b",
+        "filename": "github-oauth/BUILD",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-10T11:43:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0b45781_19984cde",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "e51d7ec32356a2c1cc261103d677f4cf43e4cc77",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b4e157e1_0cc7b55f",
@@ -61,6 +85,30 @@
       "side": 1,
       "message": "Done in: [1], so that it can be removed as well.\n\n[1]: https://gerrit-review.googlesource.com/c/gerrit/+/559781",
       "parentUuid": "b4e157e1_0cc7b55f",
+      "range": {
+        "startLine": 40,
+        "startChar": 8,
+        "endLine": 40,
+        "endChar": 52
+      },
+      "revId": "e51d7ec32356a2c1cc261103d677f4cf43e4cc77",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4a64c4f_2d3d51ac",
+        "filename": "github-plugin/BUILD",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-10T11:43:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70c7a35d_8d8583ae",
       "range": {
         "startLine": 40,
         "startChar": 8,
