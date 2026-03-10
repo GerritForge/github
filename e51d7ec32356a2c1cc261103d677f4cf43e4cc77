@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0b45781_19984cde",
+        "filename": "github-oauth/BUILD",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-03-10T10:32:22Z",
+      "side": 1,
+      "message": "This is not needed after: [1] and should be removed as well (similarly to `ow2-asm`).\n\n[1]: https://gerrit-review.googlesource.com/c/gerrit/+/549767",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "e51d7ec32356a2c1cc261103d677f4cf43e4cc77",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4e157e1_0cc7b55f",
+        "filename": "github-plugin/BUILD",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-03-10T10:32:22Z",
+      "side": 1,
+      "message": "Use: `//lib/commons:codec` like it\u0027s used in gerrit core instead?\n\nAlternatively, we could expose `commons:codec` it plugin API, similar to `commons:io` and `commons:net`, that would simplify its usage.\n\nAlso note, that on Gerrit@HEAD new repository namespace is: `@external_deps`.",
+      "range": {
+        "startLine": 40,
+        "startChar": 8,
+        "endLine": 40,
+        "endChar": 52
+      },
+      "revId": "e51d7ec32356a2c1cc261103d677f4cf43e4cc77",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
