@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "15e18ac7_5463e535",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1020677
+      },
+      "writtenOn": "2026-03-11T19:09:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "acac8591_ce497d39",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 13
+      },
+      "revId": "1d341af15461d9d278b17de068e160a8fdf5356a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "cb8096a3_6f4e1456",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -54,6 +78,30 @@
       "writtenOn": "2026-03-11T08:45:40Z",
       "side": 1,
       "message": "This is totally obsolete: we don\u0027t build the plugin with Maven anymore.",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 37
+      },
+      "revId": "1d341af15461d9d278b17de068e160a8fdf5356a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0494c92b_db2544c8",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1020677
+      },
+      "writtenOn": "2026-03-11T19:09:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83fa4fb8_fc0f722e",
       "range": {
         "startLine": 82,
         "startChar": 0,
