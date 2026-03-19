@@ -84,25 +84,11 @@ a Change in Gerrit submitted for review.
 How to build this plugin
 ------------------------
 
-### Gerrit 3.3 build
-
-GitHub plugin is designed to work with Gerrit 3.3 (currently in development).
-In order to build the GitHub plugin you need to have a working Gerrit 3.3
-build in place.
+In order to build the GitHub plugin you need to have a Gerrit tree in place.
+Symlink the Github plugin folder into gerrit/plugins folder.
 
 See https://gerrit-review.googlesource.com/Documentation/dev-bazel.html for a
 reference on how to build Gerrit using Bazel.
-
-Gerrit 3.3 is distributed for Java 11 only. However, the source code is compatible
-with Java 8 assuming you build it from the source repository by yourself.
-
-The GitHub plugin can be built for Java 17 by using the `javaVersion=1.17` Maven
-parameter.
-
-Example:
-  git clone https://github.com/GerritForge/github
-  cd github
-  mvn -DjavaVersion=17 install
 
 ### singleusergroup plugin
 
@@ -120,17 +106,21 @@ Example:
 
 ### Building GitHub integration for Gerrit
 
-Just clone the Git repository (see https://github.com/GerritForge/github)
-and do a `mvn install` from the root directory.
-This will create two JARs under github-oauth/target and github-plugin/target: the oauth is a JAR library
+Follow the below instruction to clone the repository (see https://github.com/GerritForge/github)
+and build the required artifacts.
+This will create two JARs under bazel-bin/plugins/github: the oauth is a JAR library
 to be copied to $GERRIT_SITE/lib whilst the plugin JAR has to be installed as usual under $GERRIT_SITE/plugins.
 
 Example:
   git clone https://gerrit.googlesource.com/plugins/github
-  cd github
-  mvn install
-  cp github-oauth/target/github-oauth-*.jar $GERRIT_SITE/lib
-  cp github-plugin/target/github-plugin-*.jar $GERRIT_SITE/plugins
+  git clone --recurse-submodules https://gerrit.googlesource.com/gerrit
+  cd gerrit/plugins
+  ln -sf ../../github
+  ln -sf github/external_plugin_deps.bzl .
+  cd ..
+  bazelisk build plugins/github
+  cp bazel-bin/plugins/github/github-oauth-*.jar $GERRIT_SITE/lib
+  cp bazel-bin/plugins/github/github-plugin-*.jar $GERRIT_SITE/plugins
 
 ### Register Gerrit as a Github OAuth application ###
 
