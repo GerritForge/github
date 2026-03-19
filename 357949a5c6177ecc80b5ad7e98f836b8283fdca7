@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bcbde54f_5fc4b6d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-03-19T17:50:00Z",
+      "side": 1,
+      "message": "Thanks @danielesassoli@gmail.com for the update.",
+      "revId": "357949a5c6177ecc80b5ad7e98f836b8283fdca7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
