@@ -10,21 +10,23 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
-import com.google.inject.Inject;
-import com.google.inject.assistedinject.Assisted;
 import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
+import com.google.inject.Inject;
+import com.google.inject.assistedinject.Assisted;
 import java.io.IOException;
-import lombok.experimental.Delegate;
+import java.util.Map;
 import org.eclipse.jgit.errors.UnsupportedCredentialItem;
 import org.eclipse.jgit.transport.CredentialItem;
 import org.eclipse.jgit.transport.CredentialsProvider;
 import org.eclipse.jgit.transport.URIish;
+import org.kohsuke.github.GHBranch;
+import org.kohsuke.github.GHRef;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 
-public class GitHubRepository extends GHRepository {
+public class GitHubRepository {
   public interface Factory {
     GitHubRepository create(
         @Assisted("organisation") String organisation, @Assisted("repository") String repository);
@@ -35,8 +37,7 @@ public class GitHubRepository extends GHRepository {
   private final String cloneUrl;
   private final String username;
   private final String password;
-
-  @Delegate private GHRepository ghRepository;
+  private final GHRepository ghRepository;
 
   public String getCloneUrl() {
     return cloneUrl.replace("://", "://" + username + "@");
@@ -65,6 +66,26 @@ public class GitHubRepository extends GHRepository {
     this.username = ghLogin.getMyself().getLogin();
     this.password = ghLogin.getAccessToken();
     this.ghRepository = gh.getRepository(organisation + "/" + repository);
+  }
+
+  public boolean isPrivate() {
+    return ghRepository.isPrivate();
+  }
+
+  public String getDefaultBranch() {
+    return ghRepository.getDefaultBranch();
+  }
+
+  public Map<String, GHBranch> getBranches() throws IOException {
+    return ghRepository.getBranches();
+  }
+
+  public GHRef[] getRefs() throws IOException {
+    return ghRepository.getRefs();
+  }
+
+  public long getSize() {
+    return ghRepository.getSize();
   }
 
   public CredentialsProvider getCredentialsProvider() {
