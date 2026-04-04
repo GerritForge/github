@@ -47,12 +47,6 @@ def external_plugin_deps():
     )
 
     maven_jar(
-        name = "lombok",
-        artifact = "org.projectlombok:lombok:1.18.32",
-        sha1 = "17d46b3e205515e1e8efd3ee4d57ce8018914163",
-    )
-
-    maven_jar(
         name = "com-sun-mail",
         artifact = "com.sun.mail:javax.mail:1.6.2",
         sha1 = "935151eb71beff17a2ffac15dd80184a99a0514f",
