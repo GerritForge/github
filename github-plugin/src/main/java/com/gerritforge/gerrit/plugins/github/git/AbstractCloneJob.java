@@ -35,7 +35,8 @@ public class AbstractCloneJob {
       }
       return "Import startup failed";
     } else {
-      return "Internal error";
+      String msg = exception.getMessage();
+      return msg != null ? msg : "Internal error";
     }
   }
 }
