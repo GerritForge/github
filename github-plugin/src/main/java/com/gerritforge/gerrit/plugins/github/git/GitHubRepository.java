@@ -81,7 +81,14 @@ public class GitHubRepository {
   }
 
   public GHRef[] getRefs() throws IOException {
-    return ghRepository.getRefs();
+    try {
+      return ghRepository.getRefs();
+    } catch (org.kohsuke.github.HttpException e) {
+      if (e.getMessage().toLowerCase().contains("repository is empty")) {
+        return new GHRef[0];
+      }
+      throw e;
+    }
   }
 
   public long getSize() {

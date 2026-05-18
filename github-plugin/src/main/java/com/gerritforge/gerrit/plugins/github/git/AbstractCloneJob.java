@@ -11,6 +11,7 @@
 package com.gerritforge.gerrit.plugins.github.git;
 
 import com.google.inject.ProvisionException;
+import org.kohsuke.github.HttpException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,8 +35,12 @@ public class AbstractCloneJob {
         return getErrorDescription(cause);
       }
       return "Import startup failed";
+    } else if (exception instanceof HttpException httpException) {
+	    return String.format("GitHub API failed with status code %d (%s), see %s for more details",
+              httpException.getResponseCode(), httpException.getResponseMessage(), httpException.getUrl());
     } else {
-      return "Internal error";
+      String msg = exception.getMessage();
+      return msg != null ? msg : "Internal error";
     }
   }
 }
