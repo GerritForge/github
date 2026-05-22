@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2344b05a_73881040",
+        "filename": "github-plugin/src/main/java/com/gerritforge/gerrit/plugins/github/git/AbstractCloneJob.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-05-22T08:03:50Z",
+      "side": 1,
+      "message": "Are we sure this is user-facing error?",
+      "range": {
+        "startLine": 38,
+        "startChar": 19,
+        "endLine": 38,
+        "endChar": 41
+      },
+      "revId": "7b5feca32f918eed666727f0ea9ebb02c54bf19c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
