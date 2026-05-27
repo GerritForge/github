@@ -116,11 +116,15 @@ Example:
   git clone --recurse-submodules https://gerrit.googlesource.com/gerrit
   cd gerrit/plugins
   ln -sf ../../github
-  ln -sf github/external_plugin_deps.bzl .
+  cp github/external_plugin_deps.MODULE.bazel external_plugin_deps.MODULE.bazel
   cd ..
-  bazelisk build plugins/github
+  bazelisk build //plugins/github:github
   cp bazel-bin/plugins/github/github-oauth-*.jar $GERRIT_SITE/lib
   cp bazel-bin/plugins/github/github-plugin-*.jar $GERRIT_SITE/plugins
+
+If other external plugins are already declared in `plugins/external_plugin_deps.MODULE.bazel`,
+merge the contents of `github/external_plugin_deps.MODULE.bazel` into the existing file
+instead of replacing it.
 
 ### Register Gerrit as a Github OAuth application ###
 
