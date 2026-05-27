@@ -7,22 +7,14 @@ load("@rules_java//java:defs.bzl", "java_library")
 
 PLUGIN = "github-plugin"
 
-EXT_DEPS = [
-    "com.sun.mail:javax.mail",
-    "commons-discovery:commons-discovery",
-    "javax.activation:activation",
-    "org.apache.axis:axis",
-    "org.apache.axis:axis-jaxrpc",
-    "org.apache.velocity:velocity-engine-core",
-    "org.eclipse.mylyn.github:org.eclipse.egit.github.core",
-    "org.kohsuke:github-api",
-]
-
 gerrit_plugin(
     name = PLUGIN,
     srcs = glob(["src/main/java/**/*.java"]),
     dir_name = "github",
-    ext_deps = EXT_DEPS,
+    ext_deps = [
+        "org.apache.velocity:velocity-engine-core",
+        "org.kohsuke:github-api",
+    ],
     manifest_entries = [
         "Gerrit-PluginName: github-plugin",
         "Gerrit-Module: com.gerritforge.gerrit.plugins.github.GuiceModule",
