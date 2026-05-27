@@ -1,3 +1,8 @@
+/bazel-bin
+/bazel-github
+/bazel-out
+/bazel-testlogs
+
 target
 .project
 .classpath
