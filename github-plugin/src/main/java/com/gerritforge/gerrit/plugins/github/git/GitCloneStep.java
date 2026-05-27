@@ -109,7 +109,7 @@ public class GitCloneStep extends ImportStep {
       GitHubRepository ghRepository = getRepository();
       pi.parent = config.getBaseProject(ghRepository.isPrivate());
       pi.branches = Stream.ofNullable(ghRepository.getDefaultBranch()).collect(toList());
-      gerritApi.projects().create(pi).get();
+      var unused = gerritApi.projects().create(pi).get();
     } catch (RestApiException e) {
       throw new GitException(
           "Unable to create repository " + projectName + ":" + e.getMessage(), e);
