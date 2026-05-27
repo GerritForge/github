@@ -12,6 +12,7 @@ package com.gerritforge.gerrit.plugins.github.wizard;
 
 import static com.google.gerrit.server.account.externalids.ExternalId.SCHEME_USERNAME;
 
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -37,7 +38,6 @@ import com.google.gerrit.server.restapi.account.PutName;
 import com.google.gerrit.server.restapi.account.PutPreferred;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -127,10 +127,10 @@ public class AccountController implements VelocityController {
       AuthResult result = accountManager.link(accountId, authRequestFactory.createForEmail(email));
       log.debug("Account {} linked to email {}: result = {}", accountId, email, result);
 
-      putPreferred.apply(new AccountResource.Email(user, email), null);
+      var unused = putPreferred.apply(new AccountResource.Email(user, email), null);
       NameInput nameInput = new NameInput();
       nameInput.name = fullName;
-      putName.apply(user, nameInput);
+      var unusedName = putName.apply(user, nameInput);
 
       ExternalId.Key key =
           ExternalId.Key.create(SCHEME_USERNAME, username, authConfig.isUserNameCaseInsensitive());
@@ -232,7 +232,7 @@ public class AccountController implements VelocityController {
           }
         };
     try {
-      restAddSshKey.apply(res, key);
+      var unused = restAddSshKey.apply(res, key);
     } catch (Exception e) {
       log.error("Add key " + sshKeyWithLabel + " failed", e);
       throw new IOException("Cannot store SSH Key '" + sshKeyWithLabel + "'", e);

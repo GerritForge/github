@@ -1,0 +1,61 @@
+module(name = "gerrit-github")
+
+bazel_dep(name = "rules_java", version = "9.3.0")
+bazel_dep(name = "rules_jvm_external", version = "7.0")
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+
+GITHUB_API_VERSION = "1.316"
+
+JACKSON_VERSION = "2.15.2"
+
+BRIDGE_METHOD_VERSION = "1.29"
+
+maven.install(
+    name = "github-plugin_plugin_deps",
+    artifacts = [
+        "com.fasterxml.jackson.core:jackson-annotations:" + JACKSON_VERSION,
+        "com.fasterxml.jackson.core:jackson-core:" + JACKSON_VERSION,
+        "com.fasterxml.jackson.core:jackson-databind:" + JACKSON_VERSION,
+        "com.infradna.tool:bridge-method-annotation:" + BRIDGE_METHOD_VERSION,
+        "com.infradna.tool:bridge-method-injector:" + BRIDGE_METHOD_VERSION,
+        "com.sun.mail:javax.mail:1.6.2",
+        "commons-discovery:commons-discovery:0.5",
+        "javax.activation:activation:1.1",
+        "org.apache.axis:axis:1.4",
+        "org.apache.axis:axis-jaxrpc:1.4",
+        "org.apache.velocity:velocity-engine-core:2.3",
+        "org.eclipse.mylyn.github:org.eclipse.egit.github.core:6.1.0.202203080745-r",
+        "org.kohsuke:github-api:" + GITHUB_API_VERSION,
+    ],
+    duplicate_version_warning = "error",
+    excluded_artifacts = [
+        "com.google.code.findbugs:jsr305",
+        "com.google.errorprone:error_prone_annotations",
+        "com.google.guava:failureaccess",
+        "com.google.guava:guava",
+        "com.google.j2objc:j2objc-annotations",
+        "commons-codec:commons-codec",
+        "commons-io:commons-io",
+        "org.apache.commons:commons-lang3",
+        "javax.servlet:javax.servlet-api",
+        "org.apache.httpcomponents:httpclient",
+        "org.apache.httpcomponents:httpcore",
+        "org.checkerframework:checker-qual",
+        "org.ow2.asm:asm",
+        "org.ow2.asm:asm-commons",
+        "org.ow2.asm:asm-tree",
+        "org.slf4j:slf4j-api",
+    ],
+    fail_if_repin_required = True,
+    fail_on_missing_checksum = True,
+    fetch_sources = True,
+    lock_file = "//:github-plugin_plugin_deps.lock.json",
+    repositories = [
+        "https://repo1.maven.org/maven2",
+        "https://repo.eclipse.org/content/repositories/egit-releases/",
+        "https://repo.jenkins-ci.org/releases/",
+    ],
+    version_conflict_policy = "pinned",
+)
+use_repo(maven, "github-plugin_plugin_deps")
