@@ -1,5 +1,9 @@
-load("//tools/bzl:junit.bzl", "junit_tests")
-load("//tools/bzl:plugin.bzl", "PLUGIN_DEPS", "PLUGIN_DEPS_NEVERLINK", "PLUGIN_TEST_DEPS", "gerrit_plugin")
+load(
+    "@com_googlesource_gerrit_bazlets//:gerrit_plugin.bzl",
+    "gerrit_plugin",
+    "gerrit_plugin_dependency_tests",
+    "gerrit_plugin_tests",
+)
 
 gerrit_plugin(
     name = "github-plugin",
@@ -19,27 +23,27 @@ gerrit_plugin(
     deps = [
         ":replication-api",
         "//plugins/github/github-oauth:github-oauth-lib",
-        "@axis-jaxrpc//jar",
-        "@axis//jar",
-        "@com-sun-mail//jar",
-        "@commons-discovery//jar",
-        "@eclipse-mylyn-github//jar",
-        "@github-api//jar",
-        "@javax-activation//jar",
-        "@velocity//jar",
+        "@github_plugin_deps//:com_sun_mail_javax_mail",
+        "@github_plugin_deps//:commons_discovery_commons_discovery",
+        "@github_plugin_deps//:javax_activation_activation",
+        "@github_plugin_deps//:org_apache_axis_axis",
+        "@github_plugin_deps//:org_apache_axis_axis_jaxrpc",
+        "@github_plugin_deps//:org_apache_velocity_velocity_engine_core",
+        "@github_plugin_deps//:org_eclipse_mylyn_github_org_eclipse_egit_github_core",
+        "@github_plugin_deps//:org_kohsuke_github_api",
     ],
 )
 
-junit_tests(
+gerrit_plugin_tests(
     name = "github-plugin_tests",
     srcs = glob(["src/test/java/**/*.java"]),
     tags = ["github"],
-    deps = PLUGIN_DEPS + PLUGIN_TEST_DEPS + [
+    deps = [
         ":github-plugin__plugin",
         "//javatests/com/google/gerrit/util/http/testutil",
         "//plugins/github/github-oauth:github-oauth-lib",
         "//plugins/replication:replication-api",
-        "@github-api//jar",
+        "@github_plugin_deps//:org_kohsuke_github_api",
     ],
 )
 
@@ -48,3 +52,5 @@ java_library(
     neverlink = True,
     exports = ["//plugins/replication:replication-api"],
 )
+
+gerrit_plugin_dependency_tests(plugin = "github-plugin")
