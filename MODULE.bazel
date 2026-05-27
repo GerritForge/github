@@ -5,46 +5,12 @@ bazel_dep(name = "rules_jvm_external", version = "7.0")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 
-GITHUB_API_VERSION = "1.316"
-
-JACKSON_VERSION = "2.15.2"
-
-BRIDGE_METHOD_VERSION = "1.29"
-
-maven.artifact(
-    name = "github-plugin_plugin_deps",
-    artifact = "bridge-method-injector",
-    exclusions = [
-        "org.ow2.asm:asm",
-        "org.ow2.asm:asm-commons",
-        "org.ow2.asm:asm-tree",
-    ],
-    group = "com.infradna.tool",
-    version = BRIDGE_METHOD_VERSION,
-)
-maven.artifact(
-    name = "github-plugin_plugin_deps",
-    artifact = "velocity-engine-core",
-    exclusions = [
-        "org.apache.commons:commons-lang3",
-    ],
-    group = "org.apache.velocity",
-    version = "2.3",
-)
 maven.install(
     name = "github-plugin_plugin_deps",
     artifacts = [
-        "com.fasterxml.jackson.core:jackson-annotations:" + JACKSON_VERSION,
-        "com.fasterxml.jackson.core:jackson-core:" + JACKSON_VERSION,
-        "com.fasterxml.jackson.core:jackson-databind:" + JACKSON_VERSION,
-        "com.infradna.tool:bridge-method-annotation:" + BRIDGE_METHOD_VERSION,
-        "com.sun.mail:javax.mail:1.6.2",
-        "commons-discovery:commons-discovery:0.5",
-        "javax.activation:activation:1.1",
-        "org.apache.axis:axis:1.4",
-        "org.apache.axis:axis-jaxrpc:1.4",
-        "org.eclipse.mylyn.github:org.eclipse.egit.github.core:6.1.0.202203080745-r",
-        "org.kohsuke:github-api:" + GITHUB_API_VERSION,
+        "com.infradna.tool:bridge-method-injector:1.29",
+        "org.apache.velocity:velocity-engine-core:2.3",
+        "org.kohsuke:github-api:1.316",
     ],
     duplicate_version_warning = "error",
     excluded_artifacts = [
@@ -71,7 +37,6 @@ maven.install(
     lock_file = "//:github-plugin_plugin_deps.lock.json",
     repositories = [
         "https://repo1.maven.org/maven2",
-        "https://repo.eclipse.org/content/repositories/egit-releases/",
         "https://repo.jenkins-ci.org/releases/",
     ],
     version_conflict_policy = "pinned",

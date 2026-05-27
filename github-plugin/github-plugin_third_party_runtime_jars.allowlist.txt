@@ -8,9 +8,6 @@ commons-discovery
 commons-logging
 github-api
 jackson-annotations
-jackson-core
-jackson-databind
-javax.mail
+ackson-databind
 libgithub-oauth-lib
-org.eclipse.egit.github.core-6.1.0.202203080745-r
 velocity-engine-core
