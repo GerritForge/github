@@ -20,15 +20,11 @@ java_library(
     srcs = glob(["src/main/java/**/*.java"]),
     visibility = ["//visibility:public"],
     deps = [
+        ":bridge-method-injector-neverlink",
         artifact(
-            c,
-            repository_name = EXT_REPO,
-        )
-        for c in [
-            "com.infradna.tool:bridge-method-injector",
             "org.kohsuke:github-api",
-        ]
-    ] + [
+            repository_name = EXT_REPO,
+        ),
         "//lib:servlet-api",
     ] + gerrit_api_neverlink(""),
 )
@@ -38,4 +34,16 @@ gerrit_plugin_tests(
     srcs = glob(["src/test/java/**/*.java"]),
     tags = ["github"],
     deps = [":github-oauth-lib"],
+)
+
+# bridge-method-injector is compile-only: javac needs BridgeMethodsAdded
+# to resolve inherited-method signatures on github-api types.
+# It has CLASS retention, so the JVM never loads it at runtime.
+java_library(
+    name = "bridge-method-injector-neverlink",
+    neverlink = 1,
+    exports = [artifact(
+        "com.infradna.tool:bridge-method-injector",
+        repository_name = EXT_REPO,
+    )],
 )
