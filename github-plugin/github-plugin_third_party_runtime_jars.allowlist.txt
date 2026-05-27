@@ -1,0 +1,6 @@
+github-api
+jackson-annotations
+jackson-core
+jackson-databind
+libgithub-oauth-lib
+velocity-engine-core
