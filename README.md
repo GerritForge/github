@@ -116,11 +116,54 @@ Example:
   git clone --recurse-submodules https://gerrit.googlesource.com/gerrit
   cd gerrit/plugins
   ln -sf ../../github
-  ln -sf github/external_plugin_deps.bzl .
+  ln -sf github/external_plugin_deps.MODULE.bazel .
   cd ..
   bazelisk build plugins/github
   cp bazel-bin/plugins/github/github-oauth-*.jar $GERRIT_SITE/lib
   cp bazel-bin/plugins/github/github-plugin-*.jar $GERRIT_SITE/plugins
+
+### Updating Bazel modules
+
+When the plugin's Bazel module dependencies change, regenerate the Bazel
+module lockfile to ensure all module versions are recorded and reproducible.
+
+Example:
+  cd github
+  ln -sf ../gerrit/.bazelversion .
+  bazelisk mod deps --lockfile_mode=update
+
+This updates `MODULE.bazel.lock` with the currently resolved module versions.
+
+### Pinning external dependencies
+
+When the plugin's external dependencies are updated, regenerate the dependency
+lockfile to pin the new versions.
+
+Example:
+  cd github
+  ln -sf ../gerrit/.bazelversion .
+  REPIN=1 bazelisk run @github-plugin_plugin_deps//:pin
+
+This updates `github-plugin_plugin_deps.lock.json` with the latest pinned
+dependency versions.
+
+### Cleaning Bazel Output Directories
+
+After updating Bazel modules or external dependencies, remove Bazel output
+directories before building the plugin in the Gerrit workspace:
+
+Example:
+  cd github
+  bazelisk clean --expunge
+
+This avoids intermittent build and test failures caused by stale Bazel output
+trees. In particular, wildcard test targets such as:
+
+Example:
+  cd gerrit
+  bazelisk test plugins/github/...
+
+may fail unexpectedly if the output directories are not cleaned.
 
 ### Register Gerrit as a Github OAuth application ###
 
