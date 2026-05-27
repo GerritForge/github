@@ -116,7 +116,7 @@ Example:
   git clone --recurse-submodules https://gerrit.googlesource.com/gerrit
   cd gerrit/plugins
   ln -sf ../../github
-  ln -sf github/external_plugin_deps.bzl .
+  ln -sf github/external_plugin_deps.MODULE.bazel .
   cd ..
   bazelisk build plugins/github
   cp bazel-bin/plugins/github/github-oauth-*.jar $GERRIT_SITE/lib
