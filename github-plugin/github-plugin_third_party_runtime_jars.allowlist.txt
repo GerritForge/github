@@ -2,14 +2,10 @@ activation
 annotation-indexer
 axis
 axis-jaxrpc
-bridge-method-annotation
-bridge-method-injector
 commons-discovery
 github-api
 jackson-annotations
 jackson-core
 jackson-databind
-javax.mail
 libgithub-oauth-lib
-org.eclipse.egit.github.core-6.1.0.202203080745-r
 velocity-engine-core
