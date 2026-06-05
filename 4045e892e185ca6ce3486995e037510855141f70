@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5415febe_c464613a",
+        "filename": ".bazelversion",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T08:00:55Z",
+      "side": 1,
+      "message": "Why do we need this? We are building in-tree and this should be the Gerrit\u0027s bazel version. BTW this also look stale, as Gerrit is on Bazel 9.x.",
+      "revId": "4045e892e185ca6ce3486995e037510855141f70",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27445e0d_88bb750f",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T08:00:55Z",
+      "side": 1,
+      "message": "Why `cp`? I believe linking would be best as it would not duplicate the file.",
+      "range": {
+        "startLine": 119,
+        "startChar": 2,
+        "endLine": 119,
+        "endChar": 4
+      },
+      "revId": "4045e892e185ca6ce3486995e037510855141f70",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1558642_690d093a",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T08:00:55Z",
+      "side": 1,
+      "message": "Should this be formatted a a note?",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 128,
+        "endChar": 0
+      },
+      "revId": "4045e892e185ca6ce3486995e037510855141f70",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
