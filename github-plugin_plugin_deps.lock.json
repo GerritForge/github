@@ -6,16 +6,16 @@
     "com.google.guava:failureaccess": -1493823684,
     "com.google.guava:guava": -2125091860,
     "com.google.j2objc:j2objc-annotations": 1772577837,
-    "com.infradna.tool:bridge-method-injector": -1389199084,
+    "com.infradna.tool:bridge-method-injector": -10978773,
     "commons-codec:commons-codec": 284109768,
     "commons-io:commons-io": 150368282,
     "javax.servlet:javax.servlet-api": -908348125,
     "org.apache.commons:commons-lang3": -2144251182,
     "org.apache.httpcomponents:httpclient": 1407535949,
     "org.apache.httpcomponents:httpcore": -1485416135,
-    "org.apache.velocity:velocity-engine-core": -1752169558,
+    "org.apache.velocity:velocity-engine-core": 2000171822,
     "org.checkerframework:checker-qual": -661903474,
-    "org.kohsuke:github-api": 1963016167,
+    "org.kohsuke:github-api": -470185953,
     "org.ow2.asm:asm": -29138462,
     "org.ow2.asm:asm-commons": -1100550937,
     "org.ow2.asm:asm-tree": -1173992809,
@@ -23,79 +23,79 @@
     "repositories": 1563685325
   },
   "__RESOLVED_ARTIFACTS_HASH": {
-    "com.fasterxml.jackson.core:jackson-annotations": 2047807794,
-    "com.fasterxml.jackson.core:jackson-annotations:jar:sources": 586304415,
-    "com.fasterxml.jackson.core:jackson-core": -50639062,
-    "com.fasterxml.jackson.core:jackson-core:jar:sources": 467437297,
-    "com.fasterxml.jackson.core:jackson-databind": 50084230,
-    "com.fasterxml.jackson.core:jackson-databind:jar:sources": -1928131750,
-    "com.infradna.tool:bridge-method-annotation": 518849556,
-    "com.infradna.tool:bridge-method-annotation:jar:sources": -290100366,
-    "com.infradna.tool:bridge-method-injector": 972033742,
-    "com.infradna.tool:bridge-method-injector:jar:sources": -294270624,
-    "org.apache.velocity:velocity-engine-core": -1834104631,
-    "org.apache.velocity:velocity-engine-core:jar:sources": 1230151997,
-    "org.jenkins-ci:annotation-indexer": -1872661547,
-    "org.jenkins-ci:annotation-indexer:jar:sources": 1457598110,
-    "org.kohsuke:github-api": 1844212523,
-    "org.kohsuke:github-api:jar:sources": -1632270184
+    "com.fasterxml.jackson.core:jackson-annotations": -85510638,
+    "com.fasterxml.jackson.core:jackson-annotations:jar:sources": 467665637,
+    "com.fasterxml.jackson.core:jackson-core": -959071160,
+    "com.fasterxml.jackson.core:jackson-core:jar:sources": 1813389773,
+    "com.fasterxml.jackson.core:jackson-databind": -2046812024,
+    "com.fasterxml.jackson.core:jackson-databind:jar:sources": -1481966519,
+    "com.infradna.tool:bridge-method-annotation": -1456067951,
+    "com.infradna.tool:bridge-method-annotation:jar:sources": -836496782,
+    "com.infradna.tool:bridge-method-injector": -1349125953,
+    "com.infradna.tool:bridge-method-injector:jar:sources": 87089857,
+    "org.apache.velocity:velocity-engine-core": -1806357654,
+    "org.apache.velocity:velocity-engine-core:jar:sources": 1602477622,
+    "org.jenkins-ci:annotation-indexer": 306228471,
+    "org.jenkins-ci:annotation-indexer:jar:sources": -1117260889,
+    "org.kohsuke:github-api": 110203498,
+    "org.kohsuke:github-api:jar:sources": 1429516099
   },
   "artifacts": {
     "com.fasterxml.jackson.core:jackson-annotations": {
       "shasums": {
-        "jar": "04e21f94dcfee4b078fa5a5f53047b785aaba69d19de392f616e7a7fe5d3882f",
-        "sources": "ce8e910f66e0c60d0beec66ccfe308a2426d606c85e67c76a5377dafb52eb4da"
+        "jar": "959a2ffb2d591436f51f183c6a521fc89347912f711bf0cae008cdf045d95319",
+        "sources": "6bdceeb142be2dc19f8ada2e7be1f028e47d94716d4b9ea8bd2c14b3cec0bca8"
       },
-      "version": "2.15.2"
+      "version": "2.20"
     },
     "com.fasterxml.jackson.core:jackson-core": {
       "shasums": {
-        "jar": "303c99e82b1faa91a0bae5d8fbeb56f7e2adf9b526a900dd723bf140d62bd4b4",
-        "sources": "4b29fe878549425194521d5c3270fae13f9c82cfcad639ebffea0963431bef45"
+        "jar": "bc0cf46075877201f8406ee7de2741ae7df6c066f5f0457bd80632a718c06e72",
+        "sources": "675bf321a4d8fbae2257ff61986ea5064c95599a446c4eea81c215ffb8251b21"
       },
-      "version": "2.15.2"
+      "version": "2.20.0"
     },
     "com.fasterxml.jackson.core:jackson-databind": {
       "shasums": {
-        "jar": "0eb2fdad6e40ab8832a78c9b22f58196dd970594e8d3d5a26ead87847c4f3a96",
-        "sources": "6dafb34ba03f003c998dac3f786bcfd468dfcec39eaf465180bc433ce8566d30"
+        "jar": "a70e146a6bf2cba4f9cd367169787f50adcfbb57122bc2e9c8390cd0b397ac30",
+        "sources": "e192ebfb2a0d705121cfff7419c4d28b9cf589bf52ca8e5cbe83de990c54f10b"
       },
-      "version": "2.15.2"
+      "version": "2.20.0"
     },
     "com.infradna.tool:bridge-method-annotation": {
       "shasums": {
-        "jar": "89175b14fa03dc98db34d2e54d1d91af0cd406fd73aadaae25c8ceb1f0a38e42",
-        "sources": "dd7d8e91e02fcda0bf046d60748696abe154d6526caf32df400c07a0581691f3"
+        "jar": "abb52a643a2edc11946b53f7d9fdc6a9a5a232d2248182ac2fbf1d1cc91e9607",
+        "sources": "0d684fb3eb42c213f0598ed7ff7f22aeeb9e86e449c6b8c4ac4053bb83ceed98"
       },
-      "version": "1.29"
+      "version": "1.31"
     },
     "com.infradna.tool:bridge-method-injector": {
       "shasums": {
-        "jar": "d841baf0eed294c802190eadd058d8196ebc7f4a90fb3d8f7fc351fec2d4f010",
-        "sources": "3cf84c8b1e9f84b3b793b0271980c921bbef02ab89e83be59d09409a8a74dd35"
+        "jar": "2e4f3796f50603240ccf6b988006adcd7216d056ff8227bdaf1a518eecf6e95a",
+        "sources": "792bf3f80fc37de8ff0a7454d2702fea3f324dd78a761002d4911da038fac68c"
       },
-      "version": "1.29"
+      "version": "1.31"
     },
     "org.apache.velocity:velocity-engine-core": {
       "shasums": {
-        "jar": "b086cee8fd8183e240b4afcf54fe38ec33dd8eb0da414636e5bf7aa4d9856629",
-        "sources": "43db55a9df30d2892fc15262cdf9c1794a6d5ec10cdffbde48ff2e737660a667"
+        "jar": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231",
+        "sources": "ea48b1899de5ba6a1b986e848a859b0dbe900befd944e0b49f3f14658e0becb5"
       },
-      "version": "2.3"
+      "version": "2.4.1"
     },
     "org.jenkins-ci:annotation-indexer": {
       "shasums": {
-        "jar": "783afc6bc3bf7a559725d9e2cec094697b4163054ed51f0ae0154816f1efb663",
-        "sources": "a8257ad23c177757b67f7255c4760774272ef7437f5826bd13237412df17484a"
+        "jar": "a7ca857553bf2649a7d50dcfdd4681064f0452af57eaa0391853bfc2927b75a1",
+        "sources": "c6d2a11b5e5ff0165689f9a80af36fdf9ed618f30de1d01796df236e2aa03bd4"
       },
-      "version": "1.17"
+      "version": "1.18"
     },
     "org.kohsuke:github-api": {
       "shasums": {
-        "jar": "97ddfe4bd6989719bdfb3227b753719669f8b93cbcb3c80edd02094785463f22",
-        "sources": "0cca09c60248372f2f4a45b6b34d639c51fb776f854ef4f36d67a1ef62f0bd04"
+        "jar": "740cbe21fddcd88b3baa9e006e50e5759db160822b12e93154f79013cf6d1e31",
+        "sources": "39b0afe01cdc7ec791d3bb9989dccec6b4aad0299f6782203e6078e1c397cfd5"
       },
-      "version": "1.316"
+      "version": "1.330"
     }
   },
   "dependencies": {
@@ -124,8 +124,10 @@
       "com.fasterxml.jackson.core.exc",
       "com.fasterxml.jackson.core.filter",
       "com.fasterxml.jackson.core.format",
+      "com.fasterxml.jackson.core.internal.shaded.fdp.v2_20_0",
+      "com.fasterxml.jackson.core.internal.shaded.fdp.v2_20_0.bte",
+      "com.fasterxml.jackson.core.internal.shaded.fdp.v2_20_0.chr",
       "com.fasterxml.jackson.core.io",
-      "com.fasterxml.jackson.core.io.doubleparser",
       "com.fasterxml.jackson.core.io.schubfach",
       "com.fasterxml.jackson.core.json",
       "com.fasterxml.jackson.core.json.async",
@@ -181,7 +183,6 @@
       "org.apache.velocity.runtime.resource.loader",
       "org.apache.velocity.runtime.resource.util",
       "org.apache.velocity.runtime.visitor",
-      "org.apache.velocity.shaded.commons.io",
       "org.apache.velocity.util",
       "org.apache.velocity.util.introspection"
     ],
