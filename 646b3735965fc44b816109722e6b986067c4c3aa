@@ -34,6 +34,24 @@
       "parentUuid": "a2d13844_b9a027d7",
       "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7fffe9d_07d8e2a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:06:59Z",
+      "side": 1,
+      "message": "It breaks only on MacOS, but works on Linux.\nLet\u0027s merge it for now, I\u0027ll use Linux for building this plugin and will investigate later why it isn\u0027t building anymore on MacOS.",
+      "parentUuid": "53ba528b_fb646b83",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
