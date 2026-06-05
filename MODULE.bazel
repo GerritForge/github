@@ -10,7 +10,7 @@ maven.install(
     artifacts = [
         "com.infradna.tool:bridge-method-injector:1.29",
         "org.apache.velocity:velocity-engine-core:2.3",
-        "org.kohsuke:github-api:1.316",
+        "org.kohsuke:github-api:1.330",
     ],
     duplicate_version_warning = "error",
     excluded_artifacts = [
