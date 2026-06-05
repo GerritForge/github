@@ -7,9 +7,9 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     name = "github-plugin_plugin_deps",
     artifacts = [
-        "com.infradna.tool:bridge-method-injector:1.29",
-        "org.apache.velocity:velocity-engine-core:2.3",
-        "org.kohsuke:github-api:1.316",
+        "com.infradna.tool:bridge-method-injector:1.31",
+        "org.apache.velocity:velocity-engine-core:2.4.1",
+        "org.kohsuke:github-api:1.330",
     ],
     duplicate_version_warning = "error",
     excluded_artifacts = [
