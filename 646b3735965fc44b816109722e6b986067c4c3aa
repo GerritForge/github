@@ -1,6 +1,46 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fef743b7_9a67b583",
+        "filename": ".bazelversion",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:34:46Z",
+      "side": 1,
+      "message": "Let\u0027s avoid this duplication and just link to the one from Gerrit source tree.",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99520802_a55214ce",
+        "filename": ".gitignore",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:34:46Z",
+      "side": 1,
+      "message": "are these actually generated on the plugins\u0027 directory? I believe they were generated under the Gerrit source tree root.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "a2d13844_b9a027d7",
@@ -56,6 +96,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "71c59063_ebd25490",
+        "filename": "MODULE.bazel",
+        "patchSetId": 11
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:34:46Z",
+      "side": 1,
+      "message": "Similarly to the other versions, this can be DRY-ed out into `AXIS_VERSION \u003d 1.4` and then reused here as `AXIS_VERSION`",
+      "range": {
+        "startLine": 25,
+        "startChar": 30,
+        "endLine": 25,
+        "endChar": 33
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "93d7e6b3_6f73b7c5",
         "filename": "README.md",
         "patchSetId": 11
@@ -67,6 +130,46 @@
       "writtenOn": "2026-06-05T22:16:40Z",
       "side": 1,
       "message": "Add a section related to external dependencies pinning.\n\nExample:\n```\n### Pinning external dependencies\n\nWhenever the plugin\u0027s external dependencies are updated, the corresponding lock\nfile needs to be regenerated with a `bazelisk` command.\n\nExample:\n  ln -sf ../../.bazelversion .\n  bazelisk mod deps --lockfile_mode\u003dupdate\n```\n\nThe above would always work and won\u0027t suffer from the maintenance burden of maintaining a copy of the `.bazelversion` file in every plugin\u0027s repository.\n\nRemember that we have *hundreds of plugins*: whenever we bump the `.bazelversion` in Gerrit, we should then bump the `.bazelversion` in hundreds of plugins, which is obviously unsustainable in the long term.",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3feb3852_d820637a",
+        "filename": "github-oauth/BUILD",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:34:46Z",
+      "side": 1,
+      "message": "I agree that this is a useful optimisation; however, that\u0027s not necessarily relevant to the bzlmod migration. Can we split into a separate change?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 7
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "279f2bb3_73b59f9a",
+        "filename": "github-plugin_plugin_deps.lock.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:34:46Z",
+      "side": 1,
+      "message": "Why should this `.json` file be executable?",
       "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
