@@ -16,6 +16,46 @@
       "message": "The new plugin has different content:\n\nOAuth\n\u003d\u003d\u003d\u003d\u003d\n\n1122,1137d1121\n\u003c com/infradna/\n\u003c com/infradna/tool/\n\u003c com/infradna/tool/bridge_method_injector/\n\u003c com/infradna/tool/bridge_method_injector/BridgeMethodsAdded.class\n\u003c com/infradna/tool/bridge_method_injector/ClassAnnotationInjector.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$AlreadyUpToDate.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$ClassAnnotationInjectorImpl.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$1$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$SyntheticMethod.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$WithBridgeMethodsAnnotationVisitor$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$WithBridgeMethodsAnnotationVisitor.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector.class\n\u003c com/infradna/tool/bridge_method_injector/ProcessMojo.class\n\u003c com/infradna/tool/bridge_method_injector/WithBridgeMethods.class\n1157,1164d1140\n\u003c META-INF/maven/com.infradna.tool/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/pom.properties\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/pom.xml\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/plugin-help.xml\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/pom.properties\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/pom.xml\n1169d1144\n\u003c META-INF/maven/plugin.xml\n\nPlugin\n\u003d\u003d\u003d\u003d\u003d\u003d\n\n1242,1257d1241\n\u003c com/infradna/\n\u003c com/infradna/tool/\n\u003c com/infradna/tool/bridge_method_injector/\n\u003c com/infradna/tool/bridge_method_injector/BridgeMethodsAdded.class\n\u003c com/infradna/tool/bridge_method_injector/ClassAnnotationInjector.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$AlreadyUpToDate.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$ClassAnnotationInjectorImpl.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$1$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer$SyntheticMethod.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$Transformer.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$WithBridgeMethodsAnnotationVisitor$1.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector$WithBridgeMethodsAnnotationVisitor.class\n\u003c com/infradna/tool/bridge_method_injector/MethodInjector.class\n\u003c com/infradna/tool/bridge_method_injector/ProcessMojo.class\n\u003c com/infradna/tool/bridge_method_injector/WithBridgeMethods.class\n1751,1758d1734\n\u003c META-INF/maven/com.infradna.tool/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/pom.properties\n\u003c META-INF/maven/com.infradna.tool/bridge-method-annotation/pom.xml\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/plugin-help.xml\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/pom.properties\n\u003c META-INF/maven/com.infradna.tool/bridge-method-injector/pom.xml\n1766a1743,1746\n\u003e META-INF/maven/commons-logging/\n\u003e META-INF/maven/commons-logging/commons-logging/\n\u003e META-INF/maven/commons-logging/commons-logging/pom.properties\n\u003e META-INF/maven/commons-logging/commons-logging/pom.xml\n1783d1762\n\u003c META-INF/maven/plugin.xml\n2735a2715,2744\n\u003e org/apache/commons/logging/\n\u003e org/apache/commons/logging/impl/\n\u003e org/apache/commons/logging/impl/AvalonLogger.class\n\u003e org/apache/commons/logging/impl/Jdk13LumberjackLogger.class\n\u003e org/apache/commons/logging/impl/Jdk14Logger.class\n\u003e org/apache/commons/logging/impl/Log4JLogger.class\n\u003e org/apache/commons/logging/impl/LogFactoryImpl$1.class\n\u003e org/apache/commons/logging/impl/LogFactoryImpl$2.class\n\u003e org/apache/commons/logging/impl/LogFactoryImpl$3.class\n\u003e org/apache/commons/logging/impl/LogFactoryImpl.class\n\u003e org/apache/commons/logging/impl/LogKitLogger.class\n\u003e org/apache/commons/logging/impl/NoOpLog.class\n\u003e org/apache/commons/logging/impl/ServletContextCleaner.class\n\u003e org/apache/commons/logging/impl/SimpleLog$1.class\n\u003e org/apache/commons/logging/impl/SimpleLog.class\n\u003e org/apache/commons/logging/impl/WeakHashtable$1.class\n\u003e org/apache/commons/logging/impl/WeakHashtable$Entry.class\n\u003e org/apache/commons/logging/impl/WeakHashtable$Referenced.class\n\u003e org/apache/commons/logging/impl/WeakHashtable$WeakKey.class\n\u003e org/apache/commons/logging/impl/WeakHashtable.class\n\u003e org/apache/commons/logging/Log.class\n\u003e org/apache/commons/logging/LogConfigurationException.class\n\u003e org/apache/commons/logging/LogFactory$1.class\n\u003e org/apache/commons/logging/LogFactory$2.class\n\u003e org/apache/commons/logging/LogFactory$3.class\n\u003e org/apache/commons/logging/LogFactory$4.class\n\u003e org/apache/commons/logging/LogFactory$5.class\n\u003e org/apache/commons/logging/LogFactory$6.class\n\u003e org/apache/commons/logging/LogFactory.class\n\u003e org/apache/commons/logging/LogSource.class",
       "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c4827ab_df9f8c6c",
+        "filename": "MODULE.bazel",
+        "patchSetId": 12
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T23:22:43Z",
+      "side": 1,
+      "message": "Also exclude `commons-logging`",
+      "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c9211dd9_b24b7a36",
+        "filename": "github-plugin/github-plugin_third_party_runtime_jars.allowlist.txt",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T23:22:43Z",
+      "side": 1,
+      "message": "This wasn\u0027t included in the pre-bzlmod version of the plugin, therefore should be excluded",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
