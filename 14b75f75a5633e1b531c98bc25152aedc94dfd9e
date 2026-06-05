@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "227ac930_6ce2f425",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T12:28:59Z",
+      "side": 1,
+      "message": "I would prefer to have them split into two separate changes:\n\n1. Migration to bzlmod\n2. Reduction of the plugin and lib sizes",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "14b75f75a5633e1b531c98bc25152aedc94dfd9e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
