@@ -16,6 +16,24 @@
       "message": "Fails for me with:\n```\nERROR: /Users/lucamilanesio/gerrithub/gerrit-master/plugins/github/github-plugin/BUILD:50:13: //plugins/github/github-plugin:replication-api: no such attribute \u0027neverlink\u0027 in \u0027java_library\u0027 rule\nERROR: /Users/lucamilanesio/gerrithub/gerrit-master/plugins/github/github-plugin/BUILD:50:13: //plugins/github/github-plugin:replication-api: no such attribute \u0027exports\u0027 in \u0027java_library\u0027 rule\nERROR: package contains errors: plugins/github/github-plugin\n```",
       "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53ba528b_fb646b83",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-05T19:34:32Z",
+      "side": 1,
+      "message": "That error is surprising because Bazel’s `java_library` supports both `exports` and `neverlink`.\n\nSo my first suspicion is that your local build is not resolving `java_library` to the expected rule, or that some external repo/module is stale or locally overridden.\n\nCould you try:\n\n```bash\nbazel clean --expunge\nbazel mod graph | grep -E \"bazlets|rules_java|rules_jvm_external\"\ngrep -R \"override_module\\|override_repository\\|local_path_override\\|git_override\" .bazelrc* MODULE.bazel 2\u003e/dev/null\n```\n\nCI being green suggests this may be local state or a local override rather than the change itself.",
+      "parentUuid": "a2d13844_b9a027d7",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
