@@ -11,11 +11,11 @@
 
 package com.gerritforge.gerrit.plugins.github.git;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import java.util.Collection;
 import java.util.List;
 import org.eclipse.jgit.lib.ProgressMonitor;

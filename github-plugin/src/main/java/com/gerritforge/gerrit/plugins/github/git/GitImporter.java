@@ -10,10 +10,10 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
+import com.gerritforge.gerrit.plugins.github.oauth.HttpSessionProvider;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.HttpSessionProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

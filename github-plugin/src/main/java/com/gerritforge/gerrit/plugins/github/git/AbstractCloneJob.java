@@ -36,8 +36,11 @@ public class AbstractCloneJob {
       }
       return "Import startup failed";
     } else if (exception instanceof HttpException httpException) {
-	    return String.format("GitHub API failed with status code %d (%s), see %s for more details",
-              httpException.getResponseCode(), httpException.getResponseMessage(), httpException.getUrl());
+      return String.format(
+          "GitHub API failed with status code %d (%s), see %s for more details",
+          httpException.getResponseCode(),
+          httpException.getResponseMessage(),
+          httpException.getUrl());
     } else {
       return "Internal error";
     }

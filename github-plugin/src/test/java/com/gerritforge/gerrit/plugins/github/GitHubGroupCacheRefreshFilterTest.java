@@ -13,14 +13,14 @@ package com.gerritforge.gerrit.plugins.github;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import com.gerritforge.gerrit.plugins.github.filters.GitHubGroupCacheRefreshFilter;
+import com.gerritforge.gerrit.plugins.github.group.GitHubGroupsCache;
+import com.gerritforge.gerrit.plugins.github.groups.OrganizationStructure;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.gerrit.util.http.testutil.FakeHttpServletRequest;
 import com.google.gerrit.util.http.testutil.FakeHttpServletResponse;
-import com.gerritforge.gerrit.plugins.github.filters.GitHubGroupCacheRefreshFilter;
-import com.gerritforge.gerrit.plugins.github.group.GitHubGroupsCache;
-import com.gerritforge.gerrit.plugins.github.groups.OrganizationStructure;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletResponse;

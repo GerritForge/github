@@ -13,6 +13,7 @@ package com.gerritforge.gerrit.plugins.github.oauth;
 import static com.gerritforge.gerrit.plugins.github.oauth.CanonicalWebUrls.trimTrailingSlash;
 import static com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig.KeyConfig.PASSWORD_DEVICE_CONFIG_LABEL;
 
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.Scope;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
@@ -22,7 +23,6 @@ import com.google.gerrit.server.config.ConfigUtil;
 import com.google.gerrit.server.config.GerritServerConfig;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.Scope;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;

@@ -10,8 +10,8 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.wizard;
 
-import com.google.gerrit.server.IdentifiedUser;
 import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
+import com.google.gerrit.server.IdentifiedUser;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

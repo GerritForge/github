@@ -10,10 +10,10 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
+import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.google.gerrit.extensions.registration.DynamicItem;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.googlesource.gerrit.plugins.replication.api.ReplicationRemotesApi;
 import java.io.IOException;
 import org.eclipse.jgit.lib.Config;

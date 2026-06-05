@@ -12,6 +12,9 @@ package com.gerritforge.gerrit.plugins.github.git;
 
 import static com.google.gerrit.entities.RefNames.REFS_HEADS;
 
+import com.gerritforge.gerrit.plugins.github.git.GitJobStatus.Code;
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
+import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import com.google.common.collect.Lists;
 import com.google.gerrit.entities.Account;
 import com.google.gerrit.entities.Change.Id;
@@ -29,9 +32,6 @@ import com.google.gerrit.server.project.ProjectCache;
 import com.google.gerrit.server.project.ProjectState;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.git.GitJobStatus.Code;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
-import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;

@@ -11,17 +11,6 @@
 
 package com.gerritforge.gerrit.plugins.github;
 
-import com.google.gerrit.extensions.registration.DynamicSet;
-import com.google.gerrit.extensions.restapi.RestApiModule;
-import com.google.gerrit.extensions.webui.TopMenu;
-import com.google.gerrit.server.account.GroupBackend;
-import com.google.gerrit.server.events.EventListener;
-import com.google.gerrit.server.project.ProjectResource;
-import com.google.gson.Gson;
-import com.google.inject.AbstractModule;
-import com.google.inject.Scopes;
-import com.google.inject.TypeLiteral;
-import com.google.inject.assistedinject.FactoryModuleBuilder;
 import com.gerritforge.gerrit.plugins.github.group.GitHubGroupBackend;
 import com.gerritforge.gerrit.plugins.github.group.GitHubGroupMembership;
 import com.gerritforge.gerrit.plugins.github.group.GitHubGroupsCache;
@@ -34,6 +23,17 @@ import com.gerritforge.gerrit.plugins.github.replication.ListProjectReplicationS
 import com.gerritforge.gerrit.plugins.github.replication.ReplicationStatusFlatFile;
 import com.gerritforge.gerrit.plugins.github.replication.ReplicationStatusListener;
 import com.gerritforge.gerrit.plugins.github.replication.ReplicationStatusStore;
+import com.google.gerrit.extensions.registration.DynamicSet;
+import com.google.gerrit.extensions.restapi.RestApiModule;
+import com.google.gerrit.extensions.webui.TopMenu;
+import com.google.gerrit.server.account.GroupBackend;
+import com.google.gerrit.server.events.EventListener;
+import com.google.gerrit.server.project.ProjectResource;
+import com.google.gson.Gson;
+import com.google.inject.AbstractModule;
+import com.google.inject.Scopes;
+import com.google.inject.TypeLiteral;
+import com.google.inject.assistedinject.FactoryModuleBuilder;
 
 public class GuiceModule extends AbstractModule {
 

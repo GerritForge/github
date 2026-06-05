@@ -23,6 +23,7 @@ import static com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig.KeyC
 import static com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig.KeyConfig.SECRET_KEY_CONFIG_LABEL;
 import static com.gerritforge.gerrit.plugins.github.oauth.PasswordGenerator.DEFAULT_PASSWORD_FILE;
 
+import com.gerritforge.gerrit.plugins.github.oauth.PasswordGenerator;
 import com.google.common.base.Strings;
 import com.google.gerrit.extensions.annotations.PluginName;
 import com.google.gerrit.extensions.client.AuthType;
@@ -33,7 +34,6 @@ import com.google.gerrit.pgm.init.api.InitUtil;
 import com.google.gerrit.pgm.init.api.Section;
 import com.google.gerrit.server.config.SitePaths;
 import com.google.inject.Inject;
-import com.gerritforge.gerrit.plugins.github.oauth.PasswordGenerator;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.util.EnumSet;

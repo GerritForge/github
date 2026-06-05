@@ -11,11 +11,11 @@
 
 package com.gerritforge.gerrit.plugins.github.notification;
 
+import com.gerritforge.gerrit.plugins.github.git.PullRequestImportType;
+import com.gerritforge.gerrit.plugins.github.git.PullRequestImporter;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.git.PullRequestImportType;
-import com.gerritforge.gerrit.plugins.github.git.PullRequestImporter;
 import java.io.IOException;
 import org.kohsuke.github.GHEventPayload.PullRequest;
 import org.kohsuke.github.GHRepository;

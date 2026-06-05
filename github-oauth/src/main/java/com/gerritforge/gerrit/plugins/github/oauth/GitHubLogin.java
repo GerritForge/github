@@ -13,11 +13,11 @@ package com.gerritforge.gerrit.plugins.github.oauth;
 
 import static java.util.concurrent.TimeUnit.DAYS;
 
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.Scope;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Strings;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.Scope;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;

@@ -10,6 +10,12 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.filters;
 
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
+import com.gerritforge.gerrit.plugins.github.oauth.IdentifiedUserGitHubLoginProvider;
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthFilter;
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthTokenCipher;
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthWebFilter;
+import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.gerrit.server.CurrentUser;
@@ -19,12 +25,6 @@ import com.google.gerrit.server.account.externalids.ExternalId;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
-import com.gerritforge.gerrit.plugins.github.oauth.IdentifiedUserGitHubLoginProvider;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthFilter;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthTokenCipher;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthWebFilter;
-import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import java.io.IOException;
 import java.util.Collection;
 import javax.servlet.Filter;

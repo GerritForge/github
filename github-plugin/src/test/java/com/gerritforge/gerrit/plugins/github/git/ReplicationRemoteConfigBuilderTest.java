@@ -14,9 +14,9 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.google.gerrit.extensions.registration.DynamicItem;
 import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
+import com.google.gerrit.extensions.registration.DynamicItem;
 import com.googlesource.gerrit.plugins.replication.api.ReplicationRemotesApi;
 import org.eclipse.jgit.lib.Config;
 import org.junit.Test;
