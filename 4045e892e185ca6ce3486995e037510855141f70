@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "54c68fe8_5eccc2d1",
+        "filename": ".bazelversion",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-05T22:16:40Z",
+      "side": 1,
+      "message": "Answered on https://review.gerrithub.io/c/GerritForge/cache-chroniclemap/+/1238414/2/.bazelversion#1: as you can see, it was already out of sync with Gerrit.\n\nLet\u0027s avoid copy\u0026pasting and maintaining a copy in the repository; just link to it in the build instructions.",
+      "parentUuid": "e6a123d1_95d2df9f",
+      "revId": "4045e892e185ca6ce3486995e037510855141f70",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "27445e0d_88bb750f",
         "filename": "README.md",
         "patchSetId": 1
