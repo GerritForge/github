@@ -1,6 +1,7 @@
 load(
     "@com_googlesource_gerrit_bazlets//:gerrit_plugin.bzl",
     "gerrit_api_neverlink",
+    "gerrit_plugin_dependency_tests",
     "gerrit_plugin_tests",
 )
 load("@rules_java//java:defs.bzl", "java_binary", "java_library")
@@ -38,4 +39,23 @@ gerrit_plugin_tests(
     srcs = glob(["src/test/java/**/*.java"]),
     tags = ["github"],
     deps = [":github-oauth-lib"],
+)
+
+# bridge-method-injector is compile-only: javac needs BridgeMethodsAdded
+# to resolve inherited-method signatures on github-api types.
+# It has CLASS retention, so the JVM never loads it at runtime.
+java_library(
+    name = "bridge-method-injector-neverlink",
+    neverlink = 1,
+    exports = [artifact(
+        "com.infradna.tool:bridge-method-injector",
+        repository_name = EXT_REPO,
+    )],
+)
+
+# github-oauth-lib is a java_library (not a gerrit_plugin); pass an explicit
+# `target` so the same bazlets macro can wire allowlist + overlap tests.
+gerrit_plugin_dependency_tests(
+    plugin = "github-oauth",
+    target = ":github-oauth-lib",
 )
