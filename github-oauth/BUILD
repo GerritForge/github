@@ -1,6 +1,7 @@
 load(
     "@com_googlesource_gerrit_bazlets//:gerrit_plugin.bzl",
     "gerrit_api_neverlink",
+    "gerrit_plugin_dependency_tests",
     "gerrit_plugin_tests",
 )
 load("@rules_java//java:defs.bzl", "java_binary", "java_library")
@@ -46,4 +47,11 @@ java_library(
         "com.infradna.tool:bridge-method-injector",
         repository_name = EXT_REPO,
     )],
+)
+
+# github-oauth-lib is a java_library (not a gerrit_plugin); pass an explicit
+# `target` so the same bazlets macro can wire allowlist + overlap tests.
+gerrit_plugin_dependency_tests(
+    plugin = "github-oauth",
+    target = ":github-oauth-lib",
 )

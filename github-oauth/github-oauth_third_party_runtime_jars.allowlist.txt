@@ -1,0 +1,4 @@
+github-api
+jackson-annotations
+jackson-core
+jackson-databind
