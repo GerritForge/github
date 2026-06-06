@@ -18,6 +18,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc1a7774_c9e02f51",
+        "filename": ".bazelversion",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fef743b7_9a67b583",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "99520802_a55214ce",
@@ -31,6 +49,30 @@
       "writtenOn": "2026-06-05T22:34:46Z",
       "side": 1,
       "message": "are these actually generated on the plugins\u0027 directory? I believe they were generated under the Gerrit source tree root.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 15
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0dec5781_40401701",
+        "filename": ".gitignore",
+        "patchSetId": 11
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Those are created during `MODULE.bazel.lock` or updates:\n\n```\n  $\u003e USE_BAZELISK_VERSION\u003d9.1.0 REPIN\u003d1 bazelisk run @github-plugin_plugin_deps//:pin\n  $\u003e USE_BAZELISK_VERSION\u003d9.1.0 bazelisk mod deps --lockfile_mode\u003dupdate\n```\n\nReverted. Let me know, if you would like to keep them.",
+      "parentUuid": "99520802_a55214ce",
       "range": {
         "startLine": 1,
         "startChar": 0,
@@ -117,6 +159,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "333ecac3_82c8631f",
+        "filename": "MODULE.bazel",
+        "patchSetId": 11
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71c59063_ebd25490",
+      "range": {
+        "startLine": 25,
+        "startChar": 30,
+        "endLine": 25,
+        "endChar": 33
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "93d7e6b3_6f73b7c5",
@@ -130,6 +196,24 @@
       "writtenOn": "2026-06-05T22:16:40Z",
       "side": 1,
       "message": "Add a section related to external dependencies pinning.\n\nExample:\n```\n### Pinning external dependencies\n\nWhenever the plugin\u0027s external dependencies are updated, the corresponding lock\nfile needs to be regenerated with a `bazelisk` command.\n\nExample:\n  ln -sf ../../.bazelversion .\n  bazelisk mod deps --lockfile_mode\u003dupdate\n```\n\nThe above would always work and won\u0027t suffer from the maintenance burden of maintaining a copy of the `.bazelversion` file in every plugin\u0027s repository.\n\nRemember that we have *hundreds of plugins*: whenever we bump the `.bazelversion` in Gerrit, we should then bump the `.bazelversion` in hundreds of plugins, which is obviously unsustainable in the long term.",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e71e62_036fb656",
+        "filename": "README.md",
+        "patchSetId": 11
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "I have documented both actions: Bazel module lock file update and Re-pinning of Maven dependencies:\n\n* bazelisk mod deps --lockfile_mode\u003dupdate\n* bazelisk run @github-plugin_plugin_deps//:pin\n\nDone.",
+      "parentUuid": "93d7e6b3_6f73b7c5",
       "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
@@ -157,6 +241,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "316faac9_218a319f",
+        "filename": "github-oauth/BUILD",
+        "patchSetId": 11
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3feb3852_d820637a",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 7
+      },
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "279f2bb3_73b59f9a",
@@ -170,6 +278,24 @@
       "writtenOn": "2026-06-05T22:34:46Z",
       "side": 1,
       "message": "Why should this `.json` file be executable?",
+      "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5612c8b2_d9cea9ef",
+        "filename": "github-plugin_plugin_deps.lock.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "279f2bb3_73b59f9a",
       "revId": "646b3735965fc44b816109722e6b986067c4c3aa",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }

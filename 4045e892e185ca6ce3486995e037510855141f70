@@ -54,6 +54,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdd1d5f2_d8cff4b0",
+        "filename": ".bazelversion",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54c68fe8_5eccc2d1",
+      "revId": "4045e892e185ca6ce3486995e037510855141f70",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27445e0d_88bb750f",

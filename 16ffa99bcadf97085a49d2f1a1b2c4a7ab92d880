@@ -18,6 +18,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b88bfcf9_277177f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "The both deviations should be fixed now:\n\n* bridge_method_injector re-added\n* commons-logging excluded",
+      "parentUuid": "ae4e2184_2063853f",
+      "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3c4827ab_df9f8c6c",
@@ -35,6 +53,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbae813e_da42fd97",
+        "filename": "MODULE.bazel",
+        "patchSetId": 12
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3c4827ab_df9f8c6c",
+      "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c9211dd9_b24b7a36",
@@ -48,6 +84,30 @@
       "writtenOn": "2026-06-05T23:22:43Z",
       "side": 1,
       "message": "This wasn\u0027t included in the pre-bzlmod version of the plugin, therefore should be excluded",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "16ffa99bcadf97085a49d2f1a1b2c4a7ab92d880",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c4441a5_7f404f33",
+        "filename": "github-plugin/github-plugin_third_party_runtime_jars.allowlist.txt",
+        "patchSetId": 12
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T05:46:19Z",
+      "side": 1,
+      "message": "Good catch! I should have checked it myself. Done.",
+      "parentUuid": "c9211dd9_b24b7a36",
       "range": {
         "startLine": 5,
         "startChar": 0,
