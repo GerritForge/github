@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d96a96db_84d77184",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T07:26:36Z",
+      "side": 1,
+      "message": "Note to the reviewers: This depends on bazlets change: [1].\n\n[1]: https://gerrit-review.googlesource.com/c/bazlets/+/591421",
+      "revId": "9544f39c2ee24c5d724b712b5e8b84432b13ac3b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
