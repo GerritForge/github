@@ -16,6 +16,24 @@
       "message": "Still not working for me:\n\n1) github-plugin.jar has extra unneeded classes\n\n```\norg/jvnet/hudson/annotation_indexer/\norg/jvnet/hudson/annotation_indexer/AnnotationProcessorImpl$1.class\norg/jvnet/hudson/annotation_indexer/AnnotationProcessorImpl$Use.class\norg/jvnet/hudson/annotation_indexer/AnnotationProcessorImpl.class\norg/jvnet/hudson/annotation_indexer/Index$1.class\norg/jvnet/hudson/annotation_indexer/Index$2$1.class\norg/jvnet/hudson/annotation_indexer/Index$2.class\norg/jvnet/hudson/annotation_indexer/Index.class\norg/jvnet/hudson/annotation_indexer/Indexed.class\norg/jvnet/hudson/annotation_indexer/SubtypeIterator.class\norg/jvnet/hudson/annotation_indexer/Validator.class\n```\n\n2) github-oauth.jar is empty with only its manifest inside",
       "revId": "426afa0afcf1e6c83df3bd4f893763854dd26d3e",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c87a506_f77d94d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-06T19:36:38Z",
+      "side": 1,
+      "message": "\u003e 1. github-plugin.jar has extra unneeded classes\n\u003e org/jvnet/hudson/annotation_indexer/\n[...]\n\nConfirming the observation. The chain:\n\n```\n github-plugin\n   └→ github-oauth-lib  (declares bridge-method-injector for compile)\n        └→ bridge-method-annotation  (Maven transitive)\n             └→ org.jenkins-ci:annotation-indexer (the org.jvnet.hudson classes)\n```\n\ngithub-plugin itself does not declare bridge-method-injector. It inherits the closure because it depends on github-oauth-lib, which needs the artifact at compile time for @BridgeMethodsAdded resolution on inherited org.kohsuke.github.* method signatures.\n\nThis is rules_jvm_external\u0027s behaviour by design — it resolves the full Maven transitive closure of a declared artifact. The pre-bzlmod WORKSPACE-mode build held those transitives back via mechanics that don\u0027t translate to the new model. Under bzlmod the closure surfaces the way Maven itself would resolve it. Model difference, not regression.\n\nHistory note: I had a fix for this in PS11 of this CL. You opposed it then and asked to defer to a follow-up: [1]. That\u0027s what the follow-up CL will do — keep bridge-method-injector compile-only so its transitives drop from the runtime closure.\n\n[1]: https://review.gerrithub.io/c/GerritForge/github/+/1238081/comment/3feb3852_d820637a/\n\n\u003e 2. github-oauth.jar is empty with only its manifest inside\n\nThe shipped artifact is //plugins/github:github → bazel-bin/plugins/github/github.zip, which contains both fat jars:\n\n```\n $ unzip -l bazel-bin/plugins/github/github.zip\n   6433547  github-plugin.jar\n   2953970  github-oauth.jar    ← 2.95 MB, the fat jar\n```\n\nThe empty github-oauth.jar you saw is the inner java_binary stub at bazel-bin/plugins/github/github-oauth/github-oauth.jar — never shipped. The top-level plugins/github/BUILD renames _deploy.jar to github-oauth.jar before packaging:\n\n```python\ngenrule(\n    name \u003d \"github-oauth\",\n    srcs \u003d [\"//plugins/github/github-oauth:github-oauth_deploy.jar\"],\n    outs \u003d [\"github-oauth.jar\"],\n    cmd \u003d \"cp $\u003c $@\",\n)\n```\n\nSame setup as pre-bzlmod — the migration didn\u0027t touch this packaging.",
+      "parentUuid": "2c6e6bab_cafe6f6d",
+      "revId": "426afa0afcf1e6c83df3bd4f893763854dd26d3e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
