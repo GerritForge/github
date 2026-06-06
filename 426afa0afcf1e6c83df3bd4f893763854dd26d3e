@@ -52,6 +52,23 @@
       "parentUuid": "0c87a506_f77d94d4",
       "revId": "426afa0afcf1e6c83df3bd4f893763854dd26d3e",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "104a0d2b_dbb2e4e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 14
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-06-06T20:26:05Z",
+      "side": 1,
+      "message": "Thanks for working on this @david.ostrovsky@gmail.com, it wasn\u0027t an easy porting ;-)\n\nTested E2E and working as expected 🥳",
+      "revId": "426afa0afcf1e6c83df3bd4f893763854dd26d3e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
