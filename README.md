@@ -100,9 +100,13 @@ used in Gerrit ACLs. As of Gerrit 3.3 singleuserplugin is a core plugin and
 included in Gerrit tree (if it was cloned recursively).
 
 Example:
+
+```bash
   cd gerrit
   bazelisk build plugins/singleusergroup
   cp bazel-bin/plugins/singleusergroup/singleusergroup.jar $GERRIT_SITE/plugins/.
+```
+
 
 ### Building GitHub integration for Gerrit
 
@@ -112,6 +116,8 @@ This will create two JARs under bazel-bin/plugins/github: the oauth is a JAR lib
 to be copied to $GERRIT_SITE/lib whilst the plugin JAR has to be installed as usual under $GERRIT_SITE/plugins.
 
 Example:
+
+```bash
   git clone https://gerrit.googlesource.com/plugins/github
   git clone --recurse-submodules https://gerrit.googlesource.com/gerrit
   cd gerrit/plugins
@@ -121,6 +127,7 @@ Example:
   bazelisk build plugins/github
   cp bazel-bin/plugins/github/github-oauth-*.jar $GERRIT_SITE/lib
   cp bazel-bin/plugins/github/github-plugin-*.jar $GERRIT_SITE/plugins
+```
 
 ### Updating Bazel modules
 
@@ -128,9 +135,12 @@ When the plugin's Bazel module dependencies change, regenerate the Bazel
 module lockfile to ensure all module versions are recorded and reproducible.
 
 Example:
+
+```bash
   cd github
   ln -sf ../gerrit/.bazelversion .
   bazelisk mod deps --lockfile_mode=update
+```
 
 This updates `MODULE.bazel.lock` with the currently resolved module versions.
 
@@ -140,9 +150,12 @@ When the plugin's external dependencies are updated, regenerate the dependency
 lockfile to pin the new versions.
 
 Example:
+
+```bash
   cd github
   ln -sf ../gerrit/.bazelversion .
   REPIN=1 bazelisk run @github-plugin_plugin_deps//:pin
+```
 
 This updates `github-plugin_plugin_deps.lock.json` with the latest pinned
 dependency versions.
@@ -153,15 +166,21 @@ After updating Bazel modules or external dependencies, remove Bazel output
 directories before building the plugin in the Gerrit workspace:
 
 Example:
+
+```bash
   cd github
   bazelisk clean --expunge
+```
 
 This avoids intermittent build and test failures caused by stale Bazel output
 trees. In particular, wildcard test targets such as:
 
 Example:
+
+```bash
   cd gerrit
   bazelisk test plugins/github/...
+```
 
 may fail unexpectedly if the output directories are not cleaned.
 
