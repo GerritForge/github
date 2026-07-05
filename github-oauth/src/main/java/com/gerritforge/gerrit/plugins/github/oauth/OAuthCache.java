@@ -10,6 +10,7 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.oauth;
 
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.AccessToken;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.gerrit.server.cache.CacheModule;
@@ -17,7 +18,6 @@ import com.google.inject.Inject;
 import com.google.inject.Module;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.AccessToken;
 import java.util.concurrent.ExecutionException;
 
 @Singleton

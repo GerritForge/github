@@ -10,15 +10,15 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.wizard;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
+import com.gerritforge.gerrit.plugins.github.GitHubConfig.NextPage;
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
+import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig.NextPage;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
-import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -10,12 +10,12 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
-import com.google.common.base.Strings;
-import com.google.gerrit.extensions.registration.DynamicItem;
-import com.google.inject.Inject;
 import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
+import com.google.common.base.Strings;
+import com.google.gerrit.extensions.registration.DynamicItem;
+import com.google.inject.Inject;
 import com.googlesource.gerrit.plugins.replication.api.ReplicationRemotesApi;
 import java.io.IOException;
 import java.util.ArrayList;

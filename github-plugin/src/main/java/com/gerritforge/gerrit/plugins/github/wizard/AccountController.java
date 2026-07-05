@@ -12,6 +12,7 @@ package com.gerritforge.gerrit.plugins.github.wizard;
 
 import static com.google.gerrit.server.account.externalids.ExternalId.SCHEME_USERNAME;
 
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
@@ -37,7 +38,6 @@ import com.google.gerrit.server.restapi.account.PutName;
 import com.google.gerrit.server.restapi.account.PutPreferred;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;

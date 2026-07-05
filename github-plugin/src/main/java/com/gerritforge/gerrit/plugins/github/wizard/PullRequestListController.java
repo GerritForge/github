@@ -10,6 +10,8 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.wizard;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
@@ -27,8 +29,6 @@ import com.google.gson.JsonPrimitive;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -11,6 +11,8 @@
 
 package com.gerritforge.gerrit.plugins.github;
 
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig;
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol;
 import com.google.common.collect.Sets;
 import com.google.gerrit.extensions.auth.oauth.OAuthServiceProvider;
 import com.google.gerrit.extensions.auth.oauth.OAuthToken;
@@ -18,8 +20,6 @@ import com.google.gerrit.extensions.auth.oauth.OAuthUserInfo;
 import com.google.gerrit.extensions.auth.oauth.OAuthVerifier;
 import com.google.gerrit.server.account.externalids.ExternalId;
 import com.google.inject.Inject;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol;
 import java.io.IOException;
 import org.kohsuke.github.GHMyself;
 import org.kohsuke.github.GitHub;

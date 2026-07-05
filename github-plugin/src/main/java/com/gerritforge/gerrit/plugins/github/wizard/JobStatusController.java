@@ -10,12 +10,12 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.wizard;
 
-import com.google.common.collect.Lists;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonWriter;
 import com.gerritforge.gerrit.plugins.github.git.BatchImporter;
 import com.gerritforge.gerrit.plugins.github.git.GitJob;
 import com.gerritforge.gerrit.plugins.github.git.GitJobStatus;
+import com.google.common.collect.Lists;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.List;

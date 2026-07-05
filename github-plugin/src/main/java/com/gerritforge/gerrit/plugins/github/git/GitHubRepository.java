@@ -10,11 +10,11 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
-import com.google.inject.Inject;
-import com.google.inject.assistedinject.Assisted;
 import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
+import com.google.inject.Inject;
+import com.google.inject.assistedinject.Assisted;
 import java.io.IOException;
 import lombok.experimental.Delegate;
 import org.eclipse.jgit.errors.UnsupportedCredentialItem;

@@ -12,6 +12,7 @@ package com.gerritforge.gerrit.plugins.github.git;
 
 import static java.util.stream.Collectors.toList;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import com.google.gerrit.entities.Project;
 import com.google.gerrit.extensions.api.GerritApi;
 import com.google.gerrit.extensions.api.changes.NotifyHandling;
@@ -29,7 +30,6 @@ import com.google.gerrit.server.util.OneOffRequestContext;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import java.io.File;
 import java.io.IOException;
 import java.util.stream.Stream;

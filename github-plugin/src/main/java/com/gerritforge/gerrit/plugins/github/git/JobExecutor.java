@@ -10,10 +10,10 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import com.google.gerrit.server.util.RequestScopePropagator;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

@@ -11,9 +11,9 @@
 
 package com.gerritforge.gerrit.plugins.github.group;
 
-import static com.google.common.base.Preconditions.checkArgument;
 import static com.gerritforge.gerrit.plugins.github.group.GitHubGroup.NAME_PREFIX;
 import static com.gerritforge.gerrit.plugins.github.group.GitHubGroup.UUID_PREFIX;
+import static com.google.common.base.Preconditions.checkArgument;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableSet;

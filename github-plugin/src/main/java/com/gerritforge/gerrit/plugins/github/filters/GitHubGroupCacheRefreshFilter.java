@@ -11,10 +11,10 @@
 
 package com.gerritforge.gerrit.plugins.github.filters;
 
+import com.gerritforge.gerrit.plugins.github.group.GitHubGroupsCache;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.flogger.FluentLogger;
 import com.google.gerrit.httpd.AllRequestFilter;
-import com.gerritforge.gerrit.plugins.github.group.GitHubGroupsCache;
 import java.io.IOException;
 import java.util.Optional;
 import javax.inject.Inject;

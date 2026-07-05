@@ -10,11 +10,11 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.wizard;
 
+import com.gerritforge.gerrit.plugins.github.git.PullRequestImporter;
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.gerritforge.gerrit.plugins.github.git.PullRequestImporter;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

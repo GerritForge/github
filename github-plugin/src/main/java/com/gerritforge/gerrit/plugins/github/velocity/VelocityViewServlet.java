@@ -12,6 +12,11 @@ package com.gerritforge.gerrit.plugins.github.velocity;
 
 import static com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig.GITHUB_PLUGIN_OAUTH_SCOPE;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
+import com.gerritforge.gerrit.plugins.github.oauth.CanonicalWebUrls;
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
+import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
+import com.gerritforge.gerrit.plugins.github.oauth.VirtualDomainConfig;
 import com.google.common.base.MoreObjects;
 import com.google.gerrit.server.CurrentUser;
 import com.google.gerrit.server.config.AuthConfig;
@@ -19,11 +24,6 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
-import com.gerritforge.gerrit.plugins.github.oauth.CanonicalWebUrls;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubLogin;
-import com.gerritforge.gerrit.plugins.github.oauth.ScopedProvider;
-import com.gerritforge.gerrit.plugins.github.oauth.VirtualDomainConfig;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Map.Entry;

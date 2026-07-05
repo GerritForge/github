@@ -11,6 +11,7 @@
 
 package com.gerritforge.gerrit.plugins.github.oauth;
 
+import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.AccessToken;
 import com.google.gerrit.common.Nullable;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.gerrit.server.account.AccountCache;
@@ -19,7 +20,6 @@ import com.google.gerrit.server.account.externalids.ExternalId;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.OAuthProtocol.AccessToken;
 import java.io.IOException;
 import java.util.Collection;
 import org.slf4j.Logger;

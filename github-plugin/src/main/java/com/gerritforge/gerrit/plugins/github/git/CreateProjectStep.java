@@ -10,6 +10,8 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github.git;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
+import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import com.google.gerrit.entities.AccessSection;
 import com.google.gerrit.entities.AccountGroup;
 import com.google.gerrit.entities.BooleanProjectConfig;
@@ -29,8 +31,6 @@ import com.google.gerrit.server.util.ManualRequestContext;
 import com.google.gerrit.server.util.OneOffRequestContext;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
-import com.gerritforge.gerrit.plugins.github.GitHubURL;
 import org.eclipse.jgit.lib.ProgressMonitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

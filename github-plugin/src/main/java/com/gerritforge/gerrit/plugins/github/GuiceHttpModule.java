@@ -10,17 +10,6 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github;
 
-import com.google.gerrit.extensions.annotations.Exports;
-import com.google.gerrit.extensions.auth.oauth.OAuthServiceProvider;
-import com.google.gerrit.extensions.registration.DynamicSet;
-import com.google.gerrit.extensions.webui.JavaScriptPlugin;
-import com.google.gerrit.extensions.webui.WebUiPlugin;
-import com.google.gerrit.httpd.AllRequestFilter;
-import com.google.inject.Scopes;
-import com.google.inject.TypeLiteral;
-import com.google.inject.assistedinject.FactoryModuleBuilder;
-import com.google.inject.name.Names;
-import com.google.inject.servlet.ServletModule;
 import com.gerritforge.gerrit.plugins.github.filters.GitHubGroupCacheRefreshFilter;
 import com.gerritforge.gerrit.plugins.github.filters.GitHubOAuthFilter;
 import com.gerritforge.gerrit.plugins.github.git.CreateProjectStep;
@@ -41,6 +30,17 @@ import com.gerritforge.gerrit.plugins.github.velocity.PluginVelocityRuntimeProvi
 import com.gerritforge.gerrit.plugins.github.velocity.VelocityStaticServlet;
 import com.gerritforge.gerrit.plugins.github.velocity.VelocityViewServlet;
 import com.gerritforge.gerrit.plugins.github.wizard.VelocityControllerServlet;
+import com.google.gerrit.extensions.annotations.Exports;
+import com.google.gerrit.extensions.auth.oauth.OAuthServiceProvider;
+import com.google.gerrit.extensions.registration.DynamicSet;
+import com.google.gerrit.extensions.webui.JavaScriptPlugin;
+import com.google.gerrit.extensions.webui.WebUiPlugin;
+import com.google.gerrit.httpd.AllRequestFilter;
+import com.google.inject.Scopes;
+import com.google.inject.TypeLiteral;
+import com.google.inject.assistedinject.FactoryModuleBuilder;
+import com.google.inject.name.Names;
+import com.google.inject.servlet.ServletModule;
 import org.apache.http.client.HttpClient;
 import org.apache.velocity.runtime.RuntimeInstance;
 

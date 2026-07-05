@@ -10,6 +10,7 @@
 // limitations under the License.
 package com.gerritforge.gerrit.plugins.github;
 
+import com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
@@ -20,7 +21,6 @@ import com.google.gerrit.server.config.SitePaths;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
-import com.gerritforge.gerrit.plugins.github.oauth.GitHubOAuthConfig;
 import java.net.MalformedURLException;
 import java.nio.file.Path;
 import org.eclipse.jgit.lib.Config;

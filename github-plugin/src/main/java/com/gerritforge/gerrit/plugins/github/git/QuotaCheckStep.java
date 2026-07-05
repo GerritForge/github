@@ -12,12 +12,12 @@ package com.gerritforge.gerrit.plugins.github.git;
 
 import static com.google.gerrit.server.quota.QuotaGroupDefinitions.REPOSITORY_SIZE_GROUP;
 
+import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import com.google.gerrit.entities.Project;
 import com.google.gerrit.server.quota.QuotaBackend;
 import com.google.gerrit.server.quota.QuotaResponse;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.gerritforge.gerrit.plugins.github.GitHubConfig;
 import org.eclipse.jgit.lib.ProgressMonitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
