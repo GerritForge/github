@@ -1,1 +1,1 @@
-pluginPipeline(gjfVersion: '1.22.0')
+pluginPipeline(extraGhRepos: ['gerrit-bsl-license'])

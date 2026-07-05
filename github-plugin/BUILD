@@ -36,6 +36,7 @@ gerrit_plugin(
     resources = glob(["src/main/resources/**/*"]),
     deps = [
         ":replication-api",
+        "//plugins/gerrit-bsl-license",
         "//plugins/github/github-oauth:github-oauth-lib",
     ],
 )
