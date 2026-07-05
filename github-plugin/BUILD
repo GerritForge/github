@@ -31,6 +31,7 @@ gerrit_plugin(
     deps = [
         ":github-plugin-lib",
         ":replication-api",
+        "//plugins/gerrit-bsl-license",
         "//plugins/github/github-oauth:github-oauth-lib",
         "@axis-jaxrpc//jar",
         "@axis//jar",
