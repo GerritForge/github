@@ -48,6 +48,7 @@ public class GuiceHttpModule extends ServletModule {
 
   @Override
   protected void configureServlets() {
+    install(new com.gerritforge.gerrit.plugins.bsl.HttpModule());
     bind(HttpClient.class).toProvider(PooledHttpClientProvider.class);
 
     bind(new TypeLiteral<ScopedProvider<GitHubLogin>>() {}).to(GitHubLogin.Provider.class);
