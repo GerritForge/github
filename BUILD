@@ -8,6 +8,7 @@ genrule(
     cmd = "zip -o $@ $(SRCS)",
 )
 
+
 genrule(
     name = "github-oauth",
     srcs = ["//plugins/github/github-oauth:github-oauth_deploy.jar"],
